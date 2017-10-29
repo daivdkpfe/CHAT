@@ -222,6 +222,32 @@ global.sqlQueryMore=function(sql,arr,callback){
     }
   });
 };//全局方法，查询
+global.sms_send=function(phone,text,callback){
+  var username=urlencode('phmall');
+  var password=urlencode('85765461');
+  var sender_id = urlencode("PHMALL");
+  var status=0;
+  var fp="https://www.isms.com.my/isms_send.php";
+  fp=fp+"?un="+username+"&pwd="+password+"&dstno="+phone+"&msg="+text+"&type=1&sendid="+sender_id;
+console.log(fp);
+
+  request(fp, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+        console.log(body);
+      if(body=='2000 = SUCCESS')
+      {
+        callback(1);
+      }
+      else{
+        callback(0);
+      }
+    }
+    else
+    {
+     callback(-1);
+    }
+  });
+}
 global.SendSms=function (uid,phonenumber,click_number,code,type,message,callback) {
     console.log('send:'+phonenumber);
   var send=new Promise(function(resolve,reject)

@@ -13,9 +13,9 @@
                         $(".btn-login").trigger("click");
                     }
                 });
-            $(".login-txt-left").click(function () {
-                $(".main-div").load("register.html")
-            })
+            // $(".login-txt-left").click(function () {
+            //     $(".main-div").load("register.html")
+            // })
         });
     </script>
     <img class="logo" src="images/logo1.png" alt="">
@@ -23,7 +23,7 @@
         <div class="h20"></div>
         <input type="text" class="web-input" placeholder="ID" name="username">
         <input type="password" class="web-input" placeholder="Password" name="password">
-        <p class="login-txt-left"><a>Register</a></p>
+        <p class="login-txt-left"><a href="./register">Register</a></p>
         <p class="login-txt-right"><a>Find password</a></p>
         <div class="btn-login-div">
             <button class="btn-login" >Login</button>
