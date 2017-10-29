@@ -1,0 +1,48 @@
+<div class="main">
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+//            login("123","123");//測試用的，不用密碼登錄。以後要注釋
+            $(".login-txt-left").click(function () {
+                $(".main-div").load("login.html");
+            })
+            $(".btn-login").click(function () {
+                var id=$('[name=id]').val();
+                var username=$('[name=username]').val();
+                var password=$('[name=password]').val();
+                var repassword=$('[name=repassword]').val();
+                var msg="";
+                if(id==""||username==""||password==""||repassword=="")
+                {
+                   msg="Can not be empty";
+                }
+                if(password!=repassword)
+                {
+                    msg="The password entered for the two time is inconsistent";
+                }
+                if(msg!="")
+                {
+                    alert(msg);
+                }
+                else
+                {
+                    register(id,password,username);
+                }
+            })
+        });
+    </script>
+    <img class="logo" src="images/logo.png" alt="">
+    <div class="login">
+        <div class="h20"></div>
+        <input type="text" class="web-input" placeholder="ID" name="id">
+        <input type="text" class="web-input" placeholder="Username" name="username">
+        <input type="password" class="web-input" placeholder="Password" name="password">
+        <input type="password" class="web-input" placeholder="Confirm password" name="repassword">
+        <p class="login-txt-left"><a>Login</a></p>
+        <div class="btn-login-div">
+            <button class="btn-login" >Register</button>
+        </div>
+        <!--第三方登錄-->
+    </div>
+
+</div>

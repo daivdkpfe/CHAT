@@ -1,0 +1,48 @@
+<div class="main">
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+//            login("123","123");//測試用的，不用密碼登錄。以後要注釋
+            $(".login-txt-left").click(function () {
+                $(".main-div").load("login.html");
+            })
+            $(".btn-login").click(function () {
+                var id=$('[name=id]').val();
+                var username=$('[name=username]').val();
+                var password=$('[name=password]').val();
+                var repassword=$('[name=repassword]').val();
+                var msg="";
+                if(id==""||username==""||password==""||repassword=="")
+                {
+                    msg="不能為空";
+                }
+                if(password!=repassword)
+                {
+                    msg="兩次輸入的密碼不一致";
+                }
+                if(msg!="")
+                {
+                    alert(msg);
+                }
+                else
+                {
+                    register(id,password,username);
+                }
+            })
+        });
+    </script>
+    <img class="logo" src="images/logo1.png" alt="">
+    <div class="login" style="height: 350px">
+        <div class="h20"></div>
+        <input type="text" class="web-input" placeholder="ID" name="id">
+        <input type="text" class="web-input" placeholder="用戶名" name="username">
+        <input type="password" class="web-input" placeholder="密碼" name="password">
+        <input type="password" class="web-input" placeholder="確認密碼" name="repassword">
+        <p class="login-txt-left"><a>登錄</a></p>
+        <div class="btn-login-div">
+            <button class="btn-login" >註冊</button>
+        </div>
+        <!--第三方登錄-->
+    </div>
+
+</div>

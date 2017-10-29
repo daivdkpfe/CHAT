@@ -1,0 +1,586 @@
+<div class="chat-div">
+    <!--<div class="chat-div-top">-->
+
+        <!--<div class="search-div"><input type="text" placeholder="Search"></div>-->
+    <!--</div>-->
+    <!--左边黑色条-->
+    <div class="chat-div-left">
+        <div class="portrait"></div>
+        <div class="friend chat-left-logo"></div>
+        <div class="login-out"></div>
+    </div>
+    <!--左边黑色条结束-->
+
+    <!--聊天好友列表-->
+    <div class="chat-div-main">
+        <!--搜索div-->
+        <div class="chat-search">
+            <div class="search">
+                <input type="text" class="search-input" placeholder="Search" onkeyup="ss()">
+            </div>
+        </div>
+        <!--搜索div-->
+        <!--添加好友-->
+        <div class="addFriend-div">
+            <button class="addFriend">+</button>
+        </div>
+        <!--添加好友結束-->
+        <!--聯繫人列表-->
+        <div class="chat-div-main-top">
+            <!--<div class="chat-list-div">-->
+                <!--<img src="images/portrait.jpg" class="chat-portrait" alt="">-->
+                <!--<p class="chat-username">苏弃</p>-->
+            <!--</div>-->
+            <!--<button class="show">xianshi </button>-->
+            
+        </div>
+        <!--聯繫人列表結束-->
+    </div>
+    <!--聊天好友列表結束-->
+
+    <!--详细聊聊天窗口-->
+
+    <div class="chat-div-right">
+        <!--聊天中的用户的名字-->
+        <div class="chat-div-right-top">
+            <p class="chatting-username"></p>
+            <div class="setting-div"></div>
+            <div class="setting-list-div">
+                <div class="setting-deleterFriend-div">
+                <img src="images/deleterFriend.png" alt=""><p>刪除好友</p>
+                </div>
+            </div>
+        </div>
+        <!--聊天中的用户的名字结束-->
+        <div class="chat-list">
+            <div class="chatting" style="background: url(images/logo.png)">
+                <div class="language_div">切換語言</div>
+            </div>
+        </div>
+        <div class="chat-div-right-buttom">
+            <div class="send-message">
+                <div class="messages-button-list">
+
+                    <!--表情div-->
+
+                    <div class="emoji-div">
+                        <ul>
+                            <li class="emoji-li" txt="[):]"><img src="images/Emoji/ee_1.png" alt=""></li>
+                            <li class="emoji-li" txt="[:D]"><img src="images/Emoji/ee_2.png" alt=""></li>
+                            <li class="emoji-li" txt="[;)]"><img src="images/Emoji/ee_3.png" alt=""></li>
+                            <li class="emoji-li" txt="[:-o]"><img src="images/Emoji/ee_4.png" alt=""></li>
+                            <li class="emoji-li" txt="[:p]"><img src="images/Emoji/ee_5.png" alt=""></li>
+                            <li class="emoji-li" txt="[(H)]"><img src="images/Emoji/ee_6.png" alt=""></li>
+                            <li class="emoji-li" txt="[:@]"><img src="images/Emoji/ee_7.png" alt=""></li>
+                            <li class="emoji-li" txt="[:s]"><img src="images/Emoji/ee_8.png" alt=""></li>
+                            <li class="emoji-li" txt="[:$]"><img src="images/Emoji/ee_9.png" alt=""></li>
+                            <li class="emoji-li" txt="[:(]"><img src="images/Emoji/ee_10.png" alt=""></li>
+                            <li class="emoji-li" txt="[:'(]"><img src="images/Emoji/ee_11.png" alt=""></li>
+                            <li class="emoji-li" txt="[:|]"><img src="images/Emoji/ee_12.png" alt=""></li>
+                            <li class="emoji-li" txt="[(a)]"><img src="images/Emoji/ee_13.png" alt=""></li>
+                            <li class="emoji-li" txt="[8o|]"><img src="images/Emoji/ee_14.png" alt=""></li>
+                            <li class="emoji-li" txt="[8-|]"><img src="images/Emoji/ee_15.png" alt=""></li>
+                            <li class="emoji-li" txt="[+o(]"><img src="images/Emoji/ee_16.png" alt=""></li>
+                            <li class="emoji-li" txt="[o)]"><img src="images/Emoji/ee_17.png" alt=""></li>
+                            <li class="emoji-li" txt="[|-)]"><img src="images/Emoji/ee_18.png" alt=""></li>
+                            <li class="emoji-li" txt="[*-)]"><img src="images/Emoji/ee_19.png" alt=""></li>
+                            <li class="emoji-li" txt="[:-#]"><img src="images/Emoji/ee_20.png" alt=""></li>
+                            <li class="emoji-li" txt="[:-*]"><img src="images/Emoji/ee_21.png" alt=""></li>
+                            <li class="emoji-li" txt="[^o)]"><img src="images/Emoji/ee_22.png" alt=""></li>
+                            <li class="emoji-li" txt="[8-)]"><img src="images/Emoji/ee_23.png" alt=""></li>
+                            <li class="emoji-li" txt="[(|)]"><img src="images/Emoji/ee_24.png" alt=""></li>
+                            <li class="emoji-li" txt="[(u)]"><img src="images/Emoji/ee_25.png" alt=""></li>
+                            <li class="emoji-li" txt="[(S)]"><img src="images/Emoji/ee_26.png" alt=""></li>
+                            <li class="emoji-li" txt="[(*)]"><img src="images/Emoji/ee_27.png" alt=""></li>
+                            <li class="emoji-li" txt="[(#)]"><img src="images/Emoji/ee_28.png" alt=""></li>
+                            <li class="emoji-li" txt="[(R)]"><img src="images/Emoji/ee_29.png" alt=""></li>
+                            <li class="emoji-li" txt="[({)]"><img src="images/Emoji/ee_30.png" alt=""></li>
+                            <li class="emoji-li" txt="[(})]"><img src="images/Emoji/ee_31.png" alt=""></li>
+                            <li class="emoji-li" txt="[(k)]"><img src="images/Emoji/ee_32.png" alt=""></li>
+                            <li class="emoji-li" txt="[(F)]"><img src="images/Emoji/ee_33.png" alt=""></li>
+                            <li class="emoji-li" txt="[(W)]"><img src="images/Emoji/ee_34.png" alt=""></li>
+                            <li class="emoji-li" txt="[(D)]"><img src="images/Emoji/ee_35.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <!--表情div-->
+                    <!--表情按鈕-->
+                    <div class="expression-button" alt=""></div>
+                    <!--end 表情按鈕-->
+                    <!--圖片按鈕-->
+                    <div class="picture_button"></div>
+                    <input class="picture_input" id="image" type="file" name="name" onchange="sendPrivateImg()">
+                    <!--图片按钮结束-->
+                    <!--文件按钮-->
+                    <div class="file_button"></div>
+                    <input class="file_input" id="file" type="file" name="name" onchange="sendPrivateFile()">
+                    <!--文件按钮结束-->
+
+                    <!--截圖按鈕-->
+                    <!--<div class="screenshot"></div>-->
+                    <!--截圖按鈕ENd-->
+                    <a class="History-record">歷史記錄</a>
+                </div>
+                <textarea class="messages-div"></textarea>
+                <div class="button-send">
+                    <button class="send-button">發送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--详细聊聊天窗口结束-->
+
+    <div class="history-record-div">
+        <div class="history-record-div-top"></div>
+        <div class="history-record-div-main">
+            <div class="history-record-list"></div>
+        </div>
+        <div class="history-record-div-bottom">
+            <div class="Refresh"></div>
+            <div class="change-page-div">
+                <img src="images/start-page.png" class="change-page-button start-page" alt="">
+                <img src="images/up-page.png" class="change-page-button up-page" alt="">
+                <img src="images/down-page.png" class="change-page-button down-page" alt="">
+                <img src="images/end-page.png" class="change-page-button end-page" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!--添加好友-->
+<div class="mask">
+    <div class="add-friend-div">
+        <p class="add-friend-title">添加好友</p>
+        <div class="add-friend-out"><img class="add-friend-img" src="images/page-out.png" alt=""></div>
+        <div class="add-friend-bottom">
+            <input type="text" class="web-input friend-name" placeholder="ID">
+            <button class="add-friend-button">添加好友</button>
+        </div>
+    </div>
+</div>
+<!--添加好友結束-->
+<div class="mask-agreeAdd">
+    <div class="add-friend-div">
+        <p class="add-friend-title">請求添加您為好友</p>
+        <div class="add-friend-out"><img class="agree-friend-img" src="images/page-out.png" alt=""></div>
+        <div class="add-friend-bottom">
+            <p class="agree-friend-name"></p><p>請求添加您為好友</p>
+            <button class="Agree-friend-button" id="agreeFriends">同意</button>
+            <button class="Refuse-friend-button" id="rejectFriends">拒絕</button>
+        </div>
+    </div>
+</div>
+<div class="mask-screenshot">
+
+    <div class="screenshot-div">
+
+    </div>
+</div>
+<script>
+
+    $(document).ready(function(){
+//点击enter 进行发送消息
+        $(".messages-div").bind("keyup",function(){
+            if (event.keyCode == 13) {
+                $(".send-button").trigger("click");
+            }
+        });
+
+
+//        如果有指定的对话人则填出对应的对话框
+        $.cookie("toUser","");
+        var getData=getGet();
+        console.log(getData.to);
+        if(getData.to!=null)
+        {
+            $(".chat-div-main-top").html('<div class="chat-list-div  chat-'+getData.to+'"><img src="images/portrait.jpg" class="chat-portrait" alt=""><p class="chat-username">'+getData.to+'</p><p class="recent-message"></p></div>'+$(".chat-div-main-top").html());
+            $.cookie("toUser",getData.to);
+
+        }
+        else
+        {
+
+        }
+//        如果有指定的对话人则填出对应的对话框
+
+        //截屏显示遮罩
+        $(".screenshot-div").find("a").click(function () {
+           return false;
+        });
+        $(".screenshot-div").find("img").click(function () {
+            return false;
+        });
+
+        $(".screenshot-div").click(function () {
+            $(".mask-screenshot").toggle();
+        });
+
+        $(".screenshot").click(function () {
+            //試試截屏
+            html2canvas(document.getElementById("main-div"), {
+                onrendered: function(canvas){
+                    console.log( canvas.toDataURL());
+//                    <a  href='"+canvas.toDataURL()+"' download='screenshot.jpg'>Downland</a>
+//                    下載地址
+                    $(".screenshot-div").append("<img style='margin-top: 100px;' src='"+canvas.toDataURL()+"'><a class='downland_button' href='"+canvas.toDataURL()+"' download='screenshot.jpg'>Downland</a>");
+                    $(".mask-screenshot").toggle();
+                }
+            });
+            //試試截屏
+        });
+
+        $("body").on('click','.chat-list-div',function(){
+            removeSelectId();
+            $(this).addClass("select-id");
+            $(this).find(".unread").hide();
+            userChatting();
+            $(".chat-div-right-buttom").show();
+            $(".history-record-div").hide();
+            $(".chat-div").css("width","888px");
+            $(".setting-list-div").hide();
+        });
+
+        //        点击音频消息进行播放，再点击一次暂停
+        $("body").on('click','.audio_play',function(){
+            if( $("#audio_play").attr("src")!="")
+            {
+                $("#audio_play").attr("src","");
+                $(this).find(".msg-audio-img").attr("src","images/audio.png");
+            }
+            else
+            {
+                $("#audio_play").attr("src",$(this).find("p").attr("src"));
+                $(this).find(".msg-audio-img").attr("src","images/audio.gif");
+
+            }
+        });
+        $("#audio_play").bind('ended',function () {
+            $(".msg-audio-img").attr("src","images/audio.png");
+        });
+        //        点击音频消息进行播放，再点击一次暂停 End
+
+
+//        打字時背景變白
+        $(".messages-div").focus(function () {
+         $(".send-message").css("background","white");
+        });
+        $(".messages-div").blur(function () {
+            $(".send-message").css("background","none");
+        })
+//        打字時背景變白結束
+
+
+//        發送文本
+        $(".send-button").click(function () {
+            var message=$(".messages-div").val();
+            if(message==""){
+                return false;
+            }
+
+            var to=$(".select-id").find(".chat-username").html();
+            sendMessages(message,to);
+
+//            添加發送的消息到聊天框
+                addSendMessage(escape(message));
+            $(".messages-div").val('');
+        });
+//        發送文本結束
+
+//        打开聊天记录
+        $(".History-record").click(function () {
+            if($(".history-record-div").is(":hidden"))
+            {
+
+                $(".chat-div").css("width","1088px");
+                $(".history-record-div").toggle();
+
+//                ajax获取聊天记录
+                var to=$(".select-id").find(".chat-username").html();
+
+                if( $(".history-record-list").html()!="" && to==$.cookie("to"))
+                {
+                    return false;
+                }
+
+
+                   gethistory($.cookie("username"),to,1);
+                    $.cookie("to",to);
+                    $.cookie("page",1);
+
+                //end ajax
+
+//                ajax获取聊天记录结束
+            }
+            else
+            {
+                $(".chat-div").css("width","888px");
+                $(".history-record-div").toggle();
+            }
+//        打开聊天记录结束
+
+        });
+
+
+        //            点击表情按钮打开表情面板
+        $(".expression-button").click(function () {
+
+            $(".emoji-div").toggle();
+        });
+
+//            点击表情按钮打开表情面板结束
+
+//        点击表情添加到输入框
+        $(".emoji-li").click(function () {
+
+            $(".messages-div").val($(".messages-div").val()+$(this).attr("txt"));
+        });
+//        点击表情添加到输入框结束
+
+//        刷新聊天記錄，返回第一頁
+        $(".Refresh").click(function () {
+            var to=$(".select-id").find(".chat-username").html();
+            gethistory($.cookie("username"),to,1);
+            $.cookie("to",to);
+            $.cookie("page",1);
+        });
+        $(".start-page").click(function () {
+            var to=$(".select-id").find(".chat-username").html();
+            gethistory($.cookie("username"),to,1);
+            $.cookie("page",1);
+        });
+//        刷新聊天記錄結束
+//        上一頁聊天记录
+        $(".up-page").click(function () {
+            if($.cookie("page")==1)
+            {
+                return false;
+            }
+            else
+            {
+                gethistory($.cookie("username"),$.cookie("to"),$.cookie("page")-1);
+                $.cookie("page",$.cookie("page")-1);
+            }
+        });
+//        上一页聊天记录结束
+
+//        下一頁聊天記錄
+        $(".down-page").click(function () {
+            if($.cookie("page")==$.cookie("countpage"))
+            {
+                return false;
+            }
+            else
+            {
+                var nextpage=parseInt($.cookie("page"))+1;
+                gethistory($.cookie("username"),$.cookie("to"),nextpage);
+                $.cookie("page",nextpage);
+            }
+        });
+//        下一頁聊天記錄結束
+
+//        最後一頁聊天記錄
+        $(".end-page").click(function () {
+            var to=$(".select-id").find(".chat-username").html();
+            gethistory($.cookie("username"),to,$.cookie("countpage"));
+            $.cookie("page",$.cookie("countpage"));
+        });
+//        最後一頁聊天記錄結束
+
+//        退出登錄
+        $(".login-out").click(function () {
+            conn.close();
+//            $.cookie("username","");
+        });
+//        退出登錄結束
+
+
+//        添加好友打開介面
+        $(".addFriend").click(function () {
+            $(".mask").toggle();
+        });
+//        添加好友打開介面結束
+
+//        點擊打叉關閉添加好友介面
+        $(".add-friend-img").click(function () {
+            $(".mask").toggle();
+        });
+        $(".agree-friend-img").click(function () {
+            $(".mask-agreeAdd").toggle();
+        });
+//        點擊打叉關閉好友介面結束
+
+//        點擊按鈕添加好友
+        $(".add-friend-button").click(function () {
+            if($(".friend-name").val()=="")
+            {
+                return false;
+            }
+            else
+            {
+                addFriends($(".friend-name").val());
+                $(".friend-name").val("");
+                $(".mask").hide();
+            }
+
+        });
+//        點擊按鈕添加好友結束
+
+//        點擊按鈕刪除好友
+        $(".setting-deleterFriend-div").click(function () {
+            var to=$(".select-id").find(".chat-username").html();
+            removeFriends(to);
+            $(".chat-"+to).remove();
+            $(".setting-list-div").hide();
+            $(".chatting").hide();
+            $(".chatting-username").html("");
+            $(".chat-div-right-buttom").hide();
+            $(".chatting").eq(0).show();
+        });
+
+//        點擊按鈕刪除好友結束
+
+//        點擊出現設置面板
+        $(".setting-div").click(function () {
+            $(".setting-list-div").toggle();
+        });
+//        點擊出現設置面板結束
+
+
+//        同意添加好友
+        $(".Agree-friend-button").click(function () {
+            var name=$(".agree-friend-name").html();
+            agreeAddFriend(name);
+            $(".mask-agreeAdd").toggle();
+        });
+//        同意添加好友結束
+
+//        拒绝添加对方为好友
+
+        $(".Refuse-friend-button").click(function () {
+            var name=$(".agree-friend-name").html();
+            refuseAddFriend(name);
+            $(".mask-agreeAdd").toggle();
+        });
+
+//        拒绝添加对方为好友结束
+
+
+
+
+        // 单聊贴图发送（放到消息模块里）
+        document.addEventListener('paste', function (e) {
+            if (e.clipboardData && e.clipboardData.types) {
+                if (e.clipboardData.items.length > 0) {
+                    if (/^image\/\w+$/.test(e.clipboardData.items[0].type)) {
+                        var blob = e.clipboardData.items[0].getAsFile();
+                        var url = window.URL.createObjectURL(blob);
+                        var id = conn.getUniqueId();             // 生成本地消息id
+                        var msg = new WebIM.message('img', id);  // 创建图片消息
+                        var to=$(".select-id").find(".chat-username").html();
+                        var imgUrl="";
+                        msg.set({
+                            apiUrl: WebIM.config.apiURL,
+                            file: {data: blob, url: url},
+                            to: to,                      // 接收消息对象
+                            roomType: false,
+                            chatType: 'singleChat',
+                            onFileUploadError: function (error) {
+                                console.log('Error');
+                            },
+                            onFileUploadComplete: function (data) {
+
+                                        imgUrl=msg.body.body.url;
+//                                        data.entities["0"].uuid
+
+                            },
+                            success: function (id) {
+
+
+                                $.ajax({ url: "../chat",
+                                    type:'post',
+                                    data: {
+                                        'from':$.cookie("username"),
+                                        "to":to,
+                                        "message":imgUrl,
+                                        "type":2,
+                                        "key":'web'
+                                    },
+                                    success: function(req){
+                                        var img="<img class='send-img' src='"+imgUrl+"'>";
+                                        addSendMessage(img,2);
+                                    },
+                                    error:function () {
+                                        alert("發送失敗");
+                                    }
+                                });
+                                //end ajax
+
+                            }
+                        });
+                        conn.send(msg.body);
+
+                    }
+                }
+            }
+        });
+        // 单聊贴图发送（放到消息模块里）end
+
+//        點擊圖片觸發file_input
+
+        $(".picture_button").click(function () {
+            $(".picture_input").trigger("click");
+        });
+
+//        點擊圖片觸發file_input End
+
+
+//        点击文件触发file_input
+
+        $(".file_button").click(function () {
+            $(".file_input").trigger("click");
+        });
+
+//        点击文件触发file_input End
+
+
+
+    });
+//    監聽結束
+
+    //        查找聯繫人
+    function ss () {
+            if($(".search-input").val()!="")
+            {
+                $(".chat-list-div").hide();
+                $(".chat-"+$(".search-input").val()).show();
+            }
+            else
+            {
+                $(".chat-list-div").show();
+            }
+
+    };
+    //        查找聯繫人結束
+
+
+//    獲取get數據
+    function getGet() {
+        var aQuery = window.location.href.split("?");  //取得Get参数
+        var aGET = new Array();
+        if(aQuery.length > 1)
+        {
+            var aBuf = aQuery[1].split("&");
+            for(var i=0, iLoop = aBuf.length; i<iLoop; i++)
+            {
+                var aTmp = aBuf[i].split("=");  //分离key与Value
+                aGET[aTmp[0]] = aTmp[1];
+            }
+        }
+        return aGET;
+    }
+//獲取get數據End
+    //切換語言
+    $("body").on("click",".language_div",function () {
+        $.cookie('language','en',{path:'/'});
+        window.location.href="../index.html";
+    });
+</script>

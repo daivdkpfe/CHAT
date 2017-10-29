@@ -1,0 +1,41 @@
+<div class="main">
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+//            login("123","123");//測試用的，不用密碼登錄。以後要注釋
+            $(".btn-login").click(function(){
+                var username=$("[name=username]").val();
+                var password=$("[name=password]").val();
+                login(username,password);
+            });
+            //点击enter 进行登录
+                $("input").bind("keyup",function(){
+                    if (event.keyCode == 13) {
+                        $(".btn-login").trigger("click");
+                    }
+                });
+            $(".login-txt-left").click(function () {
+                $(".main-div").load("register.html");
+            })
+        });
+    </script>
+    <img class="logo" src="images/logo.png" alt="">
+    <div class="login">
+        <div class="h20"></div>
+        <input type="text" class="web-input" placeholder="ID" name="username">
+        <input type="password" class="web-input" placeholder="Password" name="password">
+        <p class="login-txt-left"><a>Register</a></p>
+        <p class="login-txt-right"><a>Find password</a></p>
+        <div class="btn-login-div">
+            <button class="btn-login" >Login</button>
+        </div>
+        <!--第三方登錄-->
+        <div class="else-login">
+            <img src="images/facebook.png" alt=""  class="else-login-img">
+            <img src="images/google.png" alt=""  class="else-login-img">
+            <img src="images/mall.png" alt="" class="else-login-img">
+            <img src="images/Three-QRCode1.png" alt=""  class="else-login-img">
+        </div>
+    </div>
+
+</div>

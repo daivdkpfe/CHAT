@@ -1,0 +1,1488 @@
+
+
+*{
+    cursor:pointer;
+    outline:none;
+    -webkit-tap-highlight-color: transparent;
+}
+html { overflow-x: hidden; }
+
+body{
+    margin: 0;
+}
+
+.history_div p{
+    margin-bottom: 0;
+}
+
+.html{
+    font-family: "Microsoft JhengHei";
+}
+.h20{
+    height: 20px;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.hide{
+    display: none;
+}
+/*滾動條美化*/
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+    display: none;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 5px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(0,0,0,.2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background-clip: content-box;
+    box-shadow: 0 0 0 5px rgba(0,0,0,.2) inset;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+/*滾動條美化結束*/
+/* webkit 浏览器*/
+::-webkit-input-placeholder { color:orange; }
+::-webkit-input-placeholder {
+    color:orange;
+    font-size: 16px;
+    padding-left: 10px;
+    display: inline-block;
+}
+::-webkit-input-placeholder {
+
+    color:orange ;
+}
+/* 火狐浏览器 */
+::-moz-placeholder { color:orange ; }
+::-moz-placeholder {
+    color:orange ;
+}
+
+.main{
+    width: 100vw;
+    height: 317px;
+    margin:30px auto;
+
+}
+.logo{
+    width: 128px;
+    margin: 0 auto;
+    display: block;
+}
+.login{
+    margin-top: 20px;
+    width: 100vw;
+    height:317px;
+}
+.web-input{
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 0 4px;
+    display: inline-block;
+    margin: 0 10vw;
+    width: 80vw;
+    height:30px;
+    line-height: 36px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    -webkit-tap-highlight-color: transparent;
+    background-color: white;
+    margin-top: 20px;
+}
+input:focus{
+    border: 1px solid #ffa302;
+ box-shadow: rgb(255, 162, 4) 0px 0px 5px 0px;
+    outline-color: orange;
+}
+.btn-login{
+width:80vw;
+border-radius: 20px;
+margin: 0 auto;
+    display: block;
+margin-top: 0px;
+height: 32px;
+border: none;
+background-image:-webkit-linear-gradient(to right, orange, rgb(255,127,43)); background-image:linear-gradient(to right,orange,rgb(255,127,43));
+color: white;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+}
+.btn-login:hover{
+    box-shadow: none;
+}
+.login-txt-left{
+float: left;
+width: 40vw;
+    margin-left: 10vw;
+color: orange;
+text-align: left;
+}
+.login-txt-right{
+float: left;
+width: 40vw;
+color: orange;
+text-align: right;
+}
+.else-login{
+    width:80vw;
+    margin: 0 10vw;
+}
+.else-login img{
+width: 30px;
+padding: 5px;
+border: 2px solid #FFA500;
+border-radius: 50px;
+    margin: 11px;
+
+}
+
+.chat-div{
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+    border-radius: 10px;
+    width: 888px;
+    height:666px;
+    margin: 100px auto;
+}
+/*.chat-div-top{*/
+    /*box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;*/
+    /*border-radius: 10px 10px 0 0;*/
+    /*width: 888px;*/
+    /*height:50px;*/
+    /*background-image:-webkit-linear-gradient(to right, orange, rgb(255,127,43)); background-image:linear-gradient(to right,orange,rgb(255,127,43));*/
+/*}*/
+.portrait{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: url("../images/portrait.jpg");
+    background-size: 40px;
+    margin-left: 10px;
+    margin-top: 15px;
+    display: -webkit-inline-box;
+    float: left;
+}
+.search-div input{
+    width: 100px;
+    height:30px;
+    float: left;
+    border: none;
+    margin-top: 10px;
+    margin-left: 50px;
+    border-radius: 30px;
+    color: orange;
+}
+.chat-div-left{
+    float: left;
+    width: 60px;
+    height: 666px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+    background: rgb(62,58,56);
+}
+.chat-left-logo{
+    margin-top: 10px;
+    width: 60px;
+    height: 60px;
+    background: url("../images/chat2.png");
+    float: left;
+    background-size: 60px;
+}
+.chat-div-main{
+    width: 250px;
+    height:666px;
+    background-image:-webkit-linear-gradient(to top, rgb(240,240,240), rgb(227,225,223)); background-image:linear-gradient(to top, rgb(240,240,240), rgb(227,225,223));
+    float: left;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+}
+.chat-div-main-top{
+    width: 250px;
+    height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.chat-list-div{
+    float: left;
+    height:66px;
+    width:250px;
+
+
+    /*border-bottom: 1px solid rgba(0,0,0,0.12);*/
+}
+.chat-portrait{
+    width: 40px;
+    height:40px;
+    margin: 13px;
+    float: left;
+}
+.chat-username{
+    margin: 0;
+    margin-top: 10px;
+    float: left;
+}
+.isNoFriend{
+    margin: 0;
+    margin-top: 10px;
+    float: left;
+}
+.select-id{
+    background: rgb(202,199,198);
+}
+.chat-search{
+    height:64px;
+    width: 200px;
+    background: rgb(236,234,232);
+    border-bottom: 1px rgba(0,0,0,0.12) solid;
+    float: left;
+}
+.search-input{
+    border: 1px rgb(202,202,202) solid;
+    margin-left: 9px;
+    margin-top: 19.5px;
+    background: rgb(229,226,226);
+    width: 188px;
+    height:23px;
+}
+.addFriend-div{
+    width:50px;
+    height:64px;
+    background: rgb(236,234,232);
+    border-bottom: 1px rgba(0,0,0,0.12) solid;
+    float: left;
+}
+.addFriend{
+    border:1px rgb(202,202,202) solid;
+    width: 25px;
+    height:25px;
+    margin-top:19.5px;
+    margin-left: 12.5px;
+}
+.chat-div-right{
+    width: 578px;
+    height:666px;
+    background: rgb(245,245,245);
+    float: left;
+}
+.chat-div-right-top{
+    height:64px;
+    width: 578px;
+    border-radius: 0 10px 0 0;
+    border-bottom: 1px rgba(0,0,0,0.12) solid;
+}
+.chatting-username{
+    line-height: 64px;
+    font-size: 20px;
+    margin: 0;
+    margin-left: 20px;
+    width: 340px;
+    float: left;
+}
+.chatting{
+    overflow:scroll ;
+    width: 578px;
+    height:460px;
+    border-bottom: 1px rgba(0,0,0,0.12) solid;
+    overflow-x: -moz-hidden-unscrollable;/*火狐用隱藏滾動條*/
+}
+.chat-div-right-buttom{
+    width: 578px;
+    height:130px;
+    border-radius: 0 0 10px 0;
+    display: none;
+}
+.send-message{
+    height:140px;
+    border-radius: 0 0 10px 0;
+}
+.messages-div{
+    width: 99%;
+    height:65px;
+    border: none;
+    overflow:hidden;
+    resize:none;
+    background: none;
+    outline:none
+}
+.messages-button-list{
+    position: relative;
+    z-index: 1;
+    height:35px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+.button-send{
+    width: 97%;
+    height: 27px;
+}
+.send-button{
+    float: right;
+    border: none;
+    padding: 7px;
+    background: rgb(255, 162, 4);
+    color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+}
+.send-button:hover{
+    box-shadow: none;
+}
+.chat-send-message{
+    width: 548px;
+    height: auto;
+    clear: right;
+    margin: 0 auto 0 auto;
+}
+.send-message-time{
+    margin: 0 10px;
+    width: 60%;
+    text-align: right;
+    font-size: 11px;
+    color: rgba(0,0,0,0.3);
+}
+.chatting-portrait{
+    width: 30px;
+    height:30px;
+    border-radius: 30px;
+}
+.sended-message{
+    width:auto;
+    max-width: 300px;
+    height: auto;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+
+}
+.sended{
+    background: rgba(255,165,0,0.77);
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.chat-send-message-time{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*上面是發送出去的消息，下面是接收到的消息*/
+
+
+.chat-receive-message{
+    float: left;
+    width: 548px;
+    height: auto;
+    clear: right;
+    margin: 0 15px;
+}
+.receive-message-time{
+    margin: 0 10px;
+    width: 70%;
+    text-align: left;
+    font-size: 11px;
+    color: rgba(0,0,0,0.3);
+
+}
+.receiveed-message{
+    width:auto;
+    max-width: 300px;
+    height: auto;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+
+}
+.receiveed{
+    background: rgba(198,199,192,1);
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+.chat-receive-message-time{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    clear: left;
+}
+.recent-message{
+    width: 160px;
+    float: left;
+    margin: 0;
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    line-height:30px;
+}
+.History-record{
+    line-height: 30px;
+    height:30px;
+    margin-top: 2.5px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    display:-webkit-inline-box;
+    text-align: center;
+    float: right;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.History-record:hover{
+    background:rgb(216,220,223);
+}
+.history-record-div{
+    display: none;
+    height: 666px;
+    float: left;
+    width: 200px;
+    border-radius: 0 10px 10px 0;
+    /*border-left: 1px rgba(0,0,0,0.12) solid;*/
+}
+.history-record-div-top{
+    height:64px;
+    width: 200px;
+    background: rgb(245,245,245);
+    border-bottom: 1px rgba(0,0,0,0.12) solid;
+    border-radius: 0 10px 0 0;
+}
+.history-record-div-main{
+    background: whitesmoke;
+    border-left: 1px solid rgba(0, 0, 0, 0.12);
+    overflow: scroll;
+    height: 571px;
+    width: 200px;
+    border-bottom: 1px rgba(0,0,0,0.12) solid;
+}
+.history-record-div-bottom{
+    height: 30px;
+    width: 100vw;
+    background: rgb(235,235,235);
+    bottom: 0;
+    position: inherit;
+    box-shadow-bottom: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+}
+.expression-button{
+    width: 25px;
+    height:25px;
+    margin:5px;
+    background: url("../images/expression.png");
+    background-size: 25px 25px;
+    float: left;
+}
+.expression-button:hover{
+    background: url("../images/expression-1.png");
+    background-size: 25px 25px;
+}
+.emoji-div{
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+    border-radius: 5px;
+    background: white;
+    float: left;
+    position: absolute;
+    z-index: 99;
+    bottom: 35px;
+    width: 270px;
+    height: 195px;
+}
+.emoji-div ul{
+    padding: 0;
+    margin: 0;
+}
+.emoji-li{
+    padding: 2px 3px;
+    float: left;
+    list-style: none;
+}
+.emoji-li:hover{
+    background: #EEE;
+}
+.emoji-li img{
+    width: 32px;
+    height:32px;
+}
+.message-emoji{
+    height: 23px;
+    width: 23px;
+}
+.recent-message .message-emoji{
+    margin-top: 2px;
+}
+.history-record-from{
+    clear: left;
+    float: left !important;
+    margin: 0;
+    width: 60px;
+    font-size: 13px;
+    margin-left: 10px;
+    line-height: 30px !important;
+    color: rgb(255,172,42) !important;
+}
+.history-record-time{
+    color: rgb(255,172,42) !important;
+    float: left !important;
+    margin: 0;
+    font-size: 13px;
+    width: 130px;
+    line-height: 30px !important;
+}
+.history-record-message{
+    line-height: 40px !important;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 13px;
+    width: 180px;
+    color: black  !important;
+}
+.Refresh{
+    width: 30px;
+    height:30px;
+    background: url("../images/Refresh.png");
+    background-size:25px 25px;
+    background-repeat: no-repeat;
+    margin: 2.5px;
+    float: left;
+}
+.Refresh:hover{
+    background: url("../images/Refresh-1.png");
+    background-size:25px 25px;
+    background-repeat: no-repeat;
+    margin: 2.5px;
+}
+.change-page-div{
+    width: 160px;
+    height:30px;
+    float: right;
+    border-radius: 0 0 10px 0;
+}
+.change-page-button{
+    width: 25px;
+    height: 25px;
+    margin: 2.5px 7.5px;
+    float: left;
+}
+.login-out{
+    width: 30px;
+    height:30px;
+    background: url("../images/out.png");
+    position: relative;
+    background-size:30px 30px;
+    top:600px;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+}
+.login-out:hover{
+    background: url("../images/out-1.png");
+    background-repeat: no-repeat;
+    background-size:30px 30px;
+}
+.mask,.mask-agreeAdd,.mask-screenshot{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+}
+.add-friend-div{
+    width: 300px;
+    height: 169px;
+    margin: auto;
+    margin-top: 100px;
+    background: white;
+    border-radius: 10px;
+}
+.add-friend-div .web-input{
+    width: 250px;
+    margin: 20px 25px;
+}
+.add-friend-title{
+    width: 250px;
+    text-align:left;
+    padding-left: 10px;
+    margin: 0;
+    height: 40px;
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    line-height: 40px;
+    float: left;
+}
+.add-friend-out{
+    width: 40px;
+    height:40px;
+    float: left;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.add-friend-img,.agree-friend-img{
+    width: 25px;
+    height:25px;
+    margin: 7.5px;
+}
+
+.add-friend-button{
+    width: 100px;
+    height:40px;
+    margin: 0px 100px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-image: -webkit-linear-gradient(to right, orange, rgb(255,127,43));
+    background-image: linear-gradient(to right,orange,rgb(255,127,43));
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+}
+.add-friend-button:hover{
+    box-shadow: none;
+}
+.setting-div{
+    display:none;
+    width: 25px;
+    height:25px;
+    float: right;
+    margin: 19.5px 12px;
+    background: url("../images/friendSetting.png");
+    background-size:25px 25px ;
+}
+.setting-div:hover{
+    background: url("../images/friendSetting-1.png");
+    background-size:25px 25px ;
+}
+
+.setting-deleterFriend-div{
+    border-radius: 3px;
+    width: 160px;
+    height:30px;
+}
+.setting-deleterFriend-div:hover{
+    background: rgba(0,0,0,0.2);
+}
+.setting-deleterFriend-div:hover p{
+    color: rgb(255,162,4);
+}
+.setting-list-div p{
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+    float: left;
+    cursor: pointer;
+}
+.setting-list-div p:hover{
+    color: rgb(255,162,4);
+    cursor: pointer;
+}
+.setting-list-div img{
+    float: left;
+    width: 20px;
+    height:20px;
+    margin: 5px;
+    margin-left: 30px;
+}
+.agree-friend-name{
+    margin-left: 10px;
+}
+.add-friend-bottom p{
+    margin-top: 0;
+    margin-bottom: 0;
+    float: left;
+    line-height: 40px;
+}
+.Agree-friend-button{
+    clear: left;
+    float: left;
+    width: 62px;
+    height:32px;
+    background: rgb(255,162,4);
+    border-radius: 4px;
+    border: none;
+    color: white;
+    margin-left: 50px;
+    margin-right: 38px;
+    margin-top: 30px;
+}
+.Refuse-friend-button{
+    float: left;
+    width: 62px;
+    height:32px;
+    background: rgb(255,58,0);
+    border-radius: 4px;
+    border: none;
+    color: white;
+    margin-right: 50px;
+    margin-left: 38px;
+    margin-top: 30px;
+}
+.send-img{
+    width: 80%;
+    margin-left: 10%;
+}
+.chat-list-div .send-img{
+    width: 20px;
+    height:20px;
+    margin-left:0;
+}
+.picture_button{
+    outline: none;
+    border:none;
+    background: url("../images/picture.png");
+    width: 27px;
+    height:27px;
+    font-size: 0;
+    padding: 0;
+    float: left;
+    background-size: 27px 27px;
+    margin:4.5px 5px;
+}
+.picture_button:hover{
+    background: url("../images/picture-1.png");
+    background-size: 27px 27px;
+}
+.picture_input{
+    display: none;
+}
+.file_button{
+    outline: none;
+    border:none;
+    background: url("../images/file.png");
+    width: 21px;
+    height:21px;
+    font-size: 0;
+    padding: 0;
+    float: left;
+    background-size: 21px 21px;
+    margin:6.5px 5px 7.5px 13px;
+}
+.file_button:hover{
+    background: url("../images/file-1.png");
+    background-size: 21px 21px;
+}
+.file_input{
+    display: none;
+}
+.load{
+    width: 400px;
+    height:300px;
+    background: url("../images/load.gif");
+    margin: 300px auto;
+}
+.unread{
+    display: none;
+    border-radius: 90px;
+    background: red;
+    width: 7px;
+    height:7px;
+    float: right;
+    margin: 20px 10px 0 0;
+}
+.message-file-top{
+    width: 200px;
+    height: 31px;
+    border-bottom: 1px solid black;
+}
+.message-file-bottom{
+    width: 200px;
+    height: 48px;
+}
+.file_name{
+    margin: 0;
+    line-height: 24px;
+    width: 140px;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.file_down_url{
+    line-height: 24px;
+    margin: 0;
+    width: 140px;
+    float: left;
+    margin-left: 10px;
+}
+.file_down_url a{
+    text-decoration: none;
+    color: #737373;
+}
+.file_img{
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
+    background-size: 32px 32px;
+}
+.msg-audio-img{
+    float: left;
+    width: 25px;
+    margin-top: 2px;
+}
+.msg-audio-length{
+    line-height: 30px;
+    margin: 0;
+    float: left;
+    margin-left: 10px;
+}
+.audio_play{
+    height:30px;
+}
+.screenshot{
+    outline: none;
+    border:none;
+    background: url("../images/screenshot.png");
+    width: 21px;
+    height:21px;
+    font-size: 0;
+    padding: 0;
+    float: left;
+    background-size: 21px 21px;
+    margin:6.5px 5px 7.5px 13px;
+}
+.downland_button{
+    margin-top: 30px;
+    width: 200px;
+    height:30px;
+    line-height: 30px;
+    color: white;
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+    border-radius: 5px;
+    display: block;
+    margin: 30px auto;
+    background-image:-webkit-linear-gradient(to right, orange, rgb(255,127,43)); background-image:linear-gradient(to right,orange,rgb(255,127,43));
+    text-align: center;
+}
+
+
+/*手機版CSS*/
+
+.botton{
+    width: 100vw;
+    height:53px;
+    position: fixed;
+    bottom: 0;
+    background: rgb(252,252,252);
+}
+.botton div{
+    width:33.3333vw;
+    height:53px;
+    float: left;
+    border-top: 1px solid rgba(0,0,0,0.25);
+}
+.botton div img{
+    width:30px;
+    display: block;
+    margin:3px auto 0 auto;
+}
+.botton p{
+    color: gray;
+    margin: 0;
+    text-align: center;
+    width: 33.3333vw;
+}
+.chat_list{
+    width: 100vw;
+    height: 100vh;
+}
+.chat_contect{
+    width: 100vw;
+    height:60px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+.contect_logo{
+    width: 50px;
+    height:50px;
+    margin: 5px;
+}
+.contect_logo img{
+    width:50px;
+    height:50px;
+}
+.top{
+    width: 100vw;
+    height:50px;
+    background: red;
+    position: fixed;
+    top:0;
+}
+.top p{
+    color: white;
+    margin-top: 0;
+    line-height: 50px;
+    margin-left: 10px;
+    float: left;
+}
+.top{
+    width: 100vw;
+    height:50px;
+    background: rgb(55,58,65);
+    position: fixed;
+    top:0;
+    line-height: 50px;
+}
+.top_zhe{
+    height:50px;
+}
+.bottom_zhe{
+    height:55px;
+}
+.top_right{
+    float: right;
+    line-height: 50px;
+    width:50px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.contect_logo{
+    float: left;
+    clear: left;
+}
+.contect_xiangqing{
+    float: left;
+    line-height: 30px;
+    max-width: 280px;
+    overflow: hidden;
+}
+.contect_zuijin{
+    color: rgba(0,0,0,0.8);
+}
+.contect{
+    height: 60px;
+    width: 100vw;
+}
+.contect_name{
+    float: left;
+    line-height: 60px;
+    margin: 0;
+    /*border-bottom: 1px solid rgba(0,0,0,0.25);*/
+}
+
+/*聊天页*/
+.chat_page{
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background:rgb(255,255,255);
+    float: left;
+    top:0;
+}
+.chat_jilu{
+    width: 100vw;
+    height:100vh;
+    background: rgb(235,235,235);
+}
+.chat_page{
+    background: rgb(235,235,235);
+}
+p svg{
+    width: 20px !important;
+    height:20px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.input_box{
+    width: 100vw;
+    height:200px;
+    position: fixed;
+    bottom: 0;
+    background: rgb(243,243,243);
+}
+.box_close{
+    position: fixed;
+    bottom: -162px;
+}
+.emoje{
+    width:50px;
+    float: left;
+    height:32px;
+}
+.emoje img{
+    width:32px;
+    margin-left: 5px;
+}
+
+.send_button img{
+    width:32px;
+    margin-left: 5px;
+}
+.input_box input{
+    width: 250px;
+    float: left;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    height:32px;
+    background: none;
+}
+.input_box .send-button{
+    width: 50px;
+    float: left;
+    height:32px;
+}
+.input_box .send-button img{
+    margin-left: 5px;
+}
+.send_button_div{
+    width: 40px;
+    margin-left: 5px;
+    border-radius: 5px;
+    float: left;
+    text-align: center;
+    line-height: 32px;
+    height:32px;
+    color: white;
+    background:rgb(255,168,42);
+}
+.chat{
+    overflow: scroll;
+    height: 100vh;
+}
+.one_message{
+    float: left;
+    clear: both;
+    width: 100vw;
+    min-height:70px;
+}
+.one_message_logo img{
+    width: 40px;
+    height:40px;
+    margin: 5px;
+    float: left;
+}
+.one_message_right{
+    margin-left: 10px;
+    float: left;
+}
+.one_message_right_top{
+    color: rgba(0,0,0,0.3);
+}
+.one_message_right_bottom{
+    width:max-content;
+    height: auto;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    background: rgba(255,255,255,1);
+    border-radius: 3px;
+    margin-top: 2px;
+    max-width: 260px;
+    float: left;
+    clear: both;
+}
+.right div{
+    float: right !important;
+}
+.emoji_div{
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    width: 100vw;
+    height:155px;
+    overflow: scroll;
+}
+.send_else_div{
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    width: 100vw;
+    height:155px;
+    overflow: scroll;
+}
+.send_else_button{
+    width: 25vw;
+    float: left;
+    height:70px;
+}
+.send_else_button svg{
+    display: block;
+    margin: 2px auto;
+    width: 50px;
+    height:50px;
+}
+.emoji_div ul{
+    margin: 0;
+    padding: 0;
+}
+.receiveed_add_friend{
+    width: 100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    z-index: 7;
+}
+.add-friend-page{
+    width: 100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    z-index: 7;
+}
+
+.my_info{
+    width: 100vw;
+    height:80px;
+    background:white;
+    margin-top: 30px;
+    float: left;
+}
+.login_out_div{
+    width: 100vw;
+    height:50px;
+    margin-top: 20px;
+    background: white;
+    float: left;
+}
+.login_out_div svg{
+    margin: 10px;
+    width: 30px;
+    height:30px;
+    float: left;
+}
+.login_out_div p{
+    float: left;
+    margin: 0;
+    line-height: 50px;
+}
+.language_div{
+    width: 100vw;
+    height:50px;
+    margin-top: 20px;
+    background: white;
+    float: left;
+}
+.language_div svg{
+    margin: 10px;
+    width: 30px;
+    height:30px;
+    float: left;
+}
+.language_div p{
+    float: left;
+    margin: 0;
+    line-height: 50px;
+}
+.info_right{
+    float: left;
+    width: 200px;
+}
+.info_name,.info_id{
+    float: left;
+    line-height: 40px;
+    clear: left;
+}
+.info_id{
+    color: rgba(0,0,0,0.6);
+}
+.info_logo img{
+    width: 70px;
+    height:70px;
+    margin: 5px;
+    float: left;
+}
+.input_box_bottom{
+    float: left;
+}
+.myset{
+    width: 100vw;
+    height:100vh;
+    background: rgb(235,235,235);
+}
+.register_div{
+    width: 100vw;
+    height: 100vh;
+}
+.register_first{
+    margin-top: 50px;
+}
+.rigister_list{
+    height:50px;
+    width: 100vw;
+    float: left;
+}
+.rigister_list input{
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    float: left;
+    line-height: 41px;
+}
+.rigister_list svg{
+    margin: 9px;
+    float: left;
+}
+.setting-list-div{
+    right: 0;
+    top: 50px;
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    background: white;
+    border-radius: 3px;
+    float: right;
+    box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+    display: none;
+}
+d{
+    float: left;
+    line-height: 60px;
+    margin: 0;
+}
+.contect{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+.history_div{
+    display: none;
+    width: 100vw;
+    height:100vh;
+    background: red;
+    position: absolute;
+    background:rgb(235,235,235);
+    top: 0;
+    left: 0;
+    z-index: 7;
+}
+
+.tx{
+    text-align: center;
+    margin-top: 0;
+}
+.history_record_div{
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    min-height:50px;
+}
+.history_messages{
+    width: 100vw;
+    height:auto;
+    min-height: 50px;
+    background: red;
+    clear: left;
+}
+.history_name{
+    width: 100px;
+    float: left;
+    height:20px;
+    line-height: 20px;
+    background: blue;
+}
+.one_message:last-child{
+    margin-bottom: 55px;
+}
+/* margin-top: 10px; */
+
+
+/*横屏*/
+@media (min-width: 300px) and (orientation: landscape) {
+    .add-friend-div{
+        width: 300px;
+        height: 150px;
+        margin: auto;
+        margin-top: 50px;
+        background: white;
+        border-radius: 10px;
+    }
+    .setting-list-div{
+        right: 0;
+        top: 30px;
+        position: absolute;
+        width: 160px;
+        height: 30px;
+        background: white;
+        border-radius: 3px;
+        float: right;
+        box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+        display: none;
+    }
+    d{
+        float: left;
+        line-height: 50px;
+        margin: 0;
+    }
+    .botton{
+        width: 100vw;
+        height:36px;
+        position: fixed;
+        bottom: 0;
+        background: rgb(252,252,252);
+    }
+    .botton div{
+        width:33.3333vw;
+        height:36px;
+        float: left;
+        border-top: 1px solid rgba(0,0,0,0.25);
+    }
+    .botton div img{
+        width:20px;
+        display: block;
+        margin:1px auto 0 auto;
+    }
+    .botton p{
+        color: gray;
+        margin: 0;
+        float: left;
+        font-size: 10px;
+        text-align: center;
+        width: 33.3333vw;
+    }
+    .top{
+        width: 100vw;
+        height:30px;
+        background: rgb(55,58,65);
+        position: fixed;
+        top:0;
+    }
+    .top p{
+        color: white;
+        margin-top: 0;
+        line-height:30px;
+        margin-left: 10px;
+        font-size: 10px;
+    }
+    .top_zhe{
+        height:30px;
+    }
+    .bottom_zhe{
+        height:36px;
+    }
+    .top_right{
+        float: right;
+        line-height: 30px;
+        width:50px;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+    .contect_xiangqing{
+        float: left;
+        line-height: 20px;
+        max-width: 280px;
+        overflow: hidden;
+    }
+    .chat_contect{
+        width: 100vw;
+        height:50px;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+    }
+    .contect_logo{
+        width: 40px;
+        height:40px;
+        margin: 5px;
+    }
+    .contect_logo img{
+        width:40px;
+        height:40px;
+    }
+    .contect{
+        height: 50px;
+        width: 100vw;
+    }
+    .contect_name{
+        line-height: 50px;
+        margin: 0;
+
+    }
+    p svg{
+        width: 10px !important;
+        height:10px;
+        margin-top: 0;
+        margin-right: 10px;
+    }
+    .add-friend-button{
+        width: 100px;
+        height:40px;
+        margin: 0px 100px;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background-image: -webkit-linear-gradient(to right, orange, rgb(255,127,43));
+        background-image: linear-gradient(to right,orange,rgb(255,127,43));
+        box-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 6px 0px;
+    }
+    .add-friend-div .web-input{
+        width: 250px;
+        margin: 10px 25px;
+    }
+    /*聊天页面*/
+
+    .input_box{
+        width: 100vw;
+        height:200px;
+        position: fixed;
+        bottom: 0;
+        background: rgb(243,243,243);
+    }
+    .box_close{
+        position: fixed;
+        bottom: -162px;
+    }
+    .emoje{
+        width:50px;
+        float: left;
+        height:32px;
+    }
+    .emoje img{
+        width:32px;
+        margin-left: 5px;
+    }
+    .send_button img{
+        width:32px;
+        margin-left: 5px;
+    }
+
+    .input_box input{
+        width: 250px;
+        float: left;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        height:32px;
+        background: none;
+    }
+    .input_box .send-button{
+        width: 50px;
+        float: left;
+        height:32px;
+    }
+    .input_box .send-button img{
+        margin-left: 5px;
+    }
+    .send_button_div{
+        width: 40px;
+        margin-left: 5px;
+        border-radius: 5px;
+        float: left;
+        text-align: center;
+        line-height: 32px;
+        height:32px;
+        color: white;
+        background:rgb(255,168,42);
+    }
+}

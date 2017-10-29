@@ -1,0 +1,556 @@
+<div class="botton">
+    <div>
+            <img src="images/chat.png" alt="">
+            <p>對話</p>
+    </div>
+    <div>
+        <img src="images/contect2.png" alt="">
+        <p>聯繫人</p>
+    </div>
+    <div>
+        <img src="images/me.png" alt="">
+        <p>我的</p>
+    </div>
+</div>
+
+<div class="top">
+    <div class="top_left">
+        <p>PHCHAT</p>
+    </div>
+    <div class="top_right">
+        +
+    </div>
+</div>
+
+<!--//底部固定的-->
+
+<div class="top_zhe"></div>
+<!--联系人-->
+<div class="contect_list">
+    <!--<div class="contect">-->
+        <!--<div class="contect_logo">-->
+            <!--<img src="images/portrait.jpg" alt="">-->
+        <!--</div>-->
+        <!--<p class="contect_name">-->
+            <!--123456-->
+        <!--</p>-->
+    <!--</div>-->
+        <!--上面的是范本-->
+</div>
+<!--最近联系人-->
+<div class="chat_list hide">
+
+</div>
+<!--我的设置-->
+<div class="myset hide">
+    <div class="my_info">
+        <div class="info_logo">
+            <img src="images/portrait.jpg" alt="">
+        </div>
+        <div class="info_right">
+            <div class="info_name">nickname</div>
+            <div class="info_id">123456</div>
+        </div>
+    </div>
+    <div class="language_div">
+        <svg t="1503210014088" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1036" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M866.44 126.64H157.568c-57.2 0-103.728 45.4-103.728 101.208V754.56c0 55.808 46.528 101.2 103.728 101.2h443.336c0.256-0.016 27.424-0.736 58.032 4.744 26.04 4.656 60.112 14.792 74.512 36.608a19.184 19.184 0 0 0 16.04 8.52c3.528 0 7.104-0.952 10.296-2.96a18.32 18.32 0 0 0 5.704-25.696c-17.584-26.64-51.376-44.528-100.432-53.168-32.92-5.808-61.44-5.312-65.016-5.216h-442.48c-36.184 0-65.624-28.728-65.624-64.032V227.848c0-35.312 29.44-64.032 65.624-64.032h708.872c36.176 0 65.624 28.72 65.624 64.032V754.56c0 33.032-25.368 60.424-59 63.704a67.88 67.88 0 0 1-6.624 0.328h-53.2c-10.512 0-19.048 8.32-19.048 18.592 0 10.264 8.52 18.576 19.048 18.576h53.2c3.456 0 6.96-0.168 10.408-0.504a104.432 104.432 0 0 0 66.312-32.592 99.6 99.6 0 0 0 27.008-68.112V227.848c0.008-55.808-46.536-101.208-103.72-101.208z" fill="#ffa500" p-id="1037"></path><path d="M537.832 292.312h-52.136l-143.728 381.36h53.832l36.296-104.392h157.136l38.488 104.392h53.84l-143.728-381.36zM447.448 526.2l56.52-158.552c2.272-6.232 4.304-15.096 6.088-26.592h1.216c2.104 12.648 4.056 21.504 5.848 26.592l57 158.552H447.448z" fill="#ffa500" p-id="1038"></path></svg>
+        <p>切換語言</p>
+    </div>
+    <div class="login_out_div">
+        <svg t="1503019294637" class="icon" style="" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1048" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"></style></defs><path d="M1000 435 808.9988 611.0013v-113.99875H495v-124.005h313.99875000000003v-113.99875L1000 435zM673.9988 41.0013H97.9975l307.0025 130v616.00125h268.99875000000003V538.99875h45v290H405V1000L0 828.9988V0h718.99875v332.00249999999994h-45V41.00125000000003L673.9988 41.0013zM673.9988 41.0013" fill="#ffa500" p-id="1049"></path></svg>
+        <p>退出</p>
+    </div>
+</div>
+
+<!--聊天页-->
+<div class="chat_page hide">
+    <div class="setting-list-div">
+        <div class="setting-deleterFriend-div">
+            <img src="images/deleterFriend.png" alt=""><p>刪除好友</p>
+        </div>
+    </div>
+
+    <!--<div class="chat '+name+'"><div class="top"> <p class="left"><svg t="1502784354454" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="997" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M1013 448.4 247.6 448.4 607.2 93.2l-88.2-88L11 511.8 520 1018.8l86.6-87.2L247.8 571.2l765.2 0L1013 448.4z" p-id="998" fill="#ffffff"></path></svg></p> <p>'+name+'</p> </div> <div class="top_zhe"></div>-->
+
+        <!--<div class="one_message">-->
+            <!--<div class="one_message_logo">-->
+                <!--<img src="images/portrait.jpg" alt="">-->
+            <!--</div>-->
+            <!--<div class="one_message_right">-->
+                <!--<div class="one_message_right_top">2017-08-16 10:52:49</div>-->
+                <!--<div class="one_message_right_bottom">速度</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!---->
+    <!--</div>-->
+    <!--聊天-->
+
+    <div class="input_box box_close" >
+        <div class="input_box_top">
+            <div class="emoje"><img src="images/expression.png" alt=""></div>
+            <input type="text">
+            <div class="send_button">
+                <img style="margin-left: 5px;" src="images/+.png" alt="">
+                <div class="send_button_div hide">發送</div>
+            </div>
+        </div>
+        <div class="input_box_bottom">
+            <div class="emoji_div hide">
+                <ul>
+                    <li class="emoji-li" txt="[):]"><img src="images/Emoji/ee_1.png" alt=""></li>
+                    <li class="emoji-li" txt="[:D]"><img src="images/Emoji/ee_2.png" alt=""></li>
+                    <li class="emoji-li" txt="[;)]"><img src="images/Emoji/ee_3.png" alt=""></li>
+                    <li class="emoji-li" txt="[:-o]"><img src="images/Emoji/ee_4.png" alt=""></li>
+                    <li class="emoji-li" txt="[:p]"><img src="images/Emoji/ee_5.png" alt=""></li>
+                    <li class="emoji-li" txt="[(H)]"><img src="images/Emoji/ee_6.png" alt=""></li>
+                    <li class="emoji-li" txt="[:@]"><img src="images/Emoji/ee_7.png" alt=""></li>
+                    <li class="emoji-li" txt="[:s]"><img src="images/Emoji/ee_8.png" alt=""></li>
+                    <li class="emoji-li" txt="[:$]"><img src="images/Emoji/ee_9.png" alt=""></li>
+                    <li class="emoji-li" txt="[:(]"><img src="images/Emoji/ee_10.png" alt=""></li>
+                    <li class="emoji-li" txt="[:'(]"><img src="images/Emoji/ee_11.png" alt=""></li>
+                    <li class="emoji-li" txt="[:|]"><img src="images/Emoji/ee_12.png" alt=""></li>
+                    <li class="emoji-li" txt="[(a)]"><img src="images/Emoji/ee_13.png" alt=""></li>
+                    <li class="emoji-li" txt="[8o|]"><img src="images/Emoji/ee_14.png" alt=""></li>
+                    <li class="emoji-li" txt="[8-|]"><img src="images/Emoji/ee_15.png" alt=""></li>
+                    <li class="emoji-li" txt="[+o(]"><img src="images/Emoji/ee_16.png" alt=""></li>
+                    <li class="emoji-li" txt="[o)]"><img src="images/Emoji/ee_17.png" alt=""></li>
+                    <li class="emoji-li" txt="[|-)]"><img src="images/Emoji/ee_18.png" alt=""></li>
+                    <li class="emoji-li" txt="[*-)]"><img src="images/Emoji/ee_19.png" alt=""></li>
+                    <li class="emoji-li" txt="[:-#]"><img src="images/Emoji/ee_20.png" alt=""></li>
+                    <li class="emoji-li" txt="[:-*]"><img src="images/Emoji/ee_21.png" alt=""></li>
+                    <li class="emoji-li" txt="[^o)]"><img src="images/Emoji/ee_22.png" alt=""></li>
+                    <li class="emoji-li" txt="[8-)]"><img src="images/Emoji/ee_23.png" alt=""></li>
+                    <li class="emoji-li" txt="[(|)]"><img src="images/Emoji/ee_24.png" alt=""></li>
+                    <li class="emoji-li" txt="[(u)]"><img src="images/Emoji/ee_25.png" alt=""></li>
+                    <li class="emoji-li" txt="[(S)]"><img src="images/Emoji/ee_26.png" alt=""></li>
+                    <li class="emoji-li" txt="[(*)]"><img src="images/Emoji/ee_27.png" alt=""></li>
+                    <li class="emoji-li" txt="[(#)]"><img src="images/Emoji/ee_28.png" alt=""></li>
+                    <li class="emoji-li" txt="[(R)]"><img src="images/Emoji/ee_29.png" alt=""></li>
+                    <li class="emoji-li" txt="[({)]"><img src="images/Emoji/ee_30.png" alt=""></li>
+                    <li class="emoji-li" txt="[(})]"><img src="images/Emoji/ee_31.png" alt=""></li>
+                    <li class="emoji-li" txt="[(k)]"><img src="images/Emoji/ee_32.png" alt=""></li>
+                    <li class="emoji-li" txt="[(F)]"><img src="images/Emoji/ee_33.png" alt=""></li>
+                    <li class="emoji-li" txt="[(W)]"><img src="images/Emoji/ee_34.png" alt=""></li>
+                    <li class="emoji-li" txt="[(D)]"><img src="images/Emoji/ee_35.png" alt=""></li>
+                </ul>
+            </div>
+            <input class="picture_input" id="image" type="file" name="name" onchange="sendPrivateImg()">
+            <input class="file_input" id="file" type="file" name="name" onchange="sendPrivateFile()">
+            <div class="send_else_div">
+                <div class="send_else_button wap_picture_button">
+                    <svg t="1502959343066" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2245" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M799.936 721.984V800l-407.648 0.16 0.064-0.032-90.496 0.032 0.96-0.96 332.448-317.952 164.704 150.24v90.496zM416 320c52.96 0 96 43.072 96 96s-43.04 96-96 96c-52.928 0-96-43.072-96-96s43.072-96 96-96zM800.32 160H223.744A63.776 63.776 0 0 0 160 223.744v576.512C160 835.392 188.576 864 223.744 864H800.32A63.84 63.84 0 0 0 864 800.256V223.744A63.808 63.808 0 0 0 800.32 160z" p-id="2246" fill="#8a8a8a"></path></svg>
+                    <p class="tx">图片</p>
+                </div>
+
+                <div class="send_else_button wap_file_button">
+                    <svg t="1502959404400" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2429" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M224 831.936V192.096L223.808 192H576v159.936c0 35.328 28.736 64.064 64.064 64.064h159.712c0.032 0.512 0.224 1.184 0.224 1.664L800.256 832 224 831.936zM757.664 352L640 351.936V224.128L757.664 352z m76.064-11.872l-163.872-178.08C651.712 142.336 619.264 128 592.672 128H223.808A64.032 64.032 0 0 0 160 192.096v639.84A64 64 0 0 0 223.744 896h576.512A64 64 0 0 0 864 831.872V417.664c0-25.856-12.736-58.464-30.272-77.536z" p-id="2430" fill="#8a8a8a"></path><path d="M640 512h-256a32 32 0 0 0 0 64h256a32 32 0 0 0 0-64M640 672h-256a32 32 0 0 0 0 64h256a32 32 0 0 0 0-64" p-id="2431" fill="#8a8a8a"></path></svg>
+                    <p class="tx">文件</p>
+                </div>
+
+                <div class="send_else_button wap_history">
+                    <svg t="1503043133206" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5376" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M913.826909 575.022545C913.873455 572.928 913.873455 570.833455 913.873455 568.738909 913.873455 541.323636 910.196364 514.56 903.214545 488.727273 916.340364 460.706909 923.461818 430.592 923.461818 399.313455 923.461818 253.579636 768.930909 134.981818 578.978909 134.981818 507.997091 134.981818 441.949091 151.552 387.072 179.898182 347.415273 181.387636 308.922182 186.414545 272.151273 194.653091 345.925818 125.858909 456.098909 82.106182 578.978909 82.106182 800.581818 82.106182 980.852364 224.395636 980.852364 399.313455 980.852364 463.918545 956.416 524.474182 913.826909 575.022545ZM846.894545 545.326545C846.894545 696.506182 712.936727 825.483636 526.615273 855.691636L468.386909 930.769455C462.987636 937.704727 454.283636 941.847273 445.021091 941.847273 435.758545 941.847273 427.054545 937.704727 421.701818 930.769455L363.473455 855.691636C177.105455 825.483636 43.147636 696.459636 43.147636 545.326545 43.147636 370.408727 223.418182 228.119273 445.021091 228.119273 666.624 228.119273 846.894545 370.408727 846.894545 545.326545ZM88.715636 544.302545C88.715636 676.724364 212.061091 789.783273 381.998545 813.149091 389.957818 814.219636 397.079273 818.269091 401.733818 824.273455L445.021091 879.988364 488.261818 824.273455C492.916364 818.222545 500.037818 814.173091 508.043636 813.102545 677.934545 789.783273 801.28 676.724364 801.28 544.302545 801.28 393.541818 641.489455 270.894545 445.021091 270.894545 248.552727 270.894545 88.715636 393.541818 88.715636 544.302545ZM522.845091 559.848727C522.845091 589.032727 497.058909 612.724364 465.408 612.724364 433.757091 612.724364 408.017455 589.032727 408.017455 559.848727 408.017455 530.711273 433.757091 506.973091 465.408 506.973091 497.058909 506.973091 522.845091 530.711273 522.845091 559.848727ZM651.822545 506.973091C683.473455 506.973091 709.213091 530.711273 709.213091 559.848727 709.213091 589.032727 683.473455 612.724364 651.822545 612.724364 620.125091 612.724364 594.385455 589.032727 594.385455 559.848727 594.385455 530.711273 620.125091 506.973091 651.822545 506.973091ZM287.744 612.724364C256.093091 612.724364 230.306909 589.032727 230.306909 559.848727 230.306909 530.711273 256.093091 506.973091 287.744 506.973091 319.394909 506.973091 345.134545 530.711273 345.134545 559.848727 345.134545 589.032727 319.394909 612.724364 287.744 612.724364Z" p-id="5377" fill="#8a8a8a"></path></svg>
+                    <p class="tx">歷史記錄</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--添加好友-->
+<div class="add-friend-page hide">
+    <div class="add-friend-div">
+        <p class="add-friend-title">添加好友</p>
+        <div class="add-friend-out"><img class="add-friend-img" src="images/page-out.png" alt=""></div>
+        <div class="add-friend-bottom">
+            <input type="text" class="web-input friend-name" placeholder="ID">
+            <button class="add-friend-button">添加好友</button>
+        </div>
+    </div>
+</div>
+
+<!--接收到添加好友请求-->
+<div class="receiveed_add_friend hide">
+    <div class="add-friend-div">
+        <p class="add-friend-title">請求添加您為好友</p>
+        <div class="add-friend-out"><img class="agree-friend-img" src="images/page-out.png" alt=""></div>
+        <div class="add-friend-bottom">
+            <p class="agree-friend-name"></p><p>請求添加您為好友</p>
+            <button class="Agree-friend-button" id="agreeFriends">同意</button>
+            <button class="Refuse-friend-button" id="rejectFriends">拒絕</button>
+        </div>
+    </div>
+</div>
+
+<!--聊天记录-->
+<div class="history_div">
+    <div class="top">
+        <p class="return"><svg t="1502784354454" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="997" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M1013 448.4 247.6 448.4 607.2 93.2l-88.2-88L11 511.8 520 1018.8l86.6-87.2L247.8 571.2l765.2 0L1013 448.4z" p-id="998" fill="#ffffff"></path></svg></p><p>聊天记录</p>
+        <div class="top_zhe"></div>
+        <div class="history_record_div"></div>
+        <div class="history-record-div-bottom">
+            <div class="Refresh"></div>
+            <div class="change-page-div">
+                <img src="images/start-page.png" class="change-page-button start-page" alt="">
+                <img src="images/up-page.png" class="change-page-button up-page" alt="">
+                <img src="images/down-page.png" class="change-page-button down-page" alt="">
+                <img src="images/end-page.png" class="change-page-button end-page" alt="">
+            </div>
+        </div>
+        <div class="bottom_zhe"></div>
+    </div>
+</div>
+
+<div class="bottom_zhe"></div>
+
+<script>
+
+
+
+
+    //        刷新聊天記錄，返回第一頁
+    $(".Refresh").click(function () {
+        var to=$.cookie("to");
+        gethistory($.cookie("username"),to,1);
+        $.cookie("to",to);
+        $.cookie("page",1);
+    });
+    $(".start-page").click(function () {
+        var to=$.cookie("to");
+        gethistory($.cookie("username"),to,1);
+        $.cookie("page",1);
+    });
+    //        刷新聊天記錄結束
+    //        上一頁聊天记录
+    $(".up-page").click(function () {
+        if($.cookie("page")==1)
+        {
+            return false;
+        }
+        else
+        {
+            gethistory($.cookie("username"),$.cookie("to"),$.cookie("page")-1);
+            $.cookie("page",$.cookie("page")-1);
+        }
+    });
+    //        上一页聊天记录结束
+
+    //        下一頁聊天記錄
+    $(".down-page").click(function () {
+
+        if($.cookie("page")==$.cookie("countpage"))
+        {
+            return false;
+        }
+        else
+        {
+            var nextpage=parseInt($.cookie("page"))+1;
+            gethistory($.cookie("username"),$.cookie("to"),nextpage);
+            $.cookie("page",nextpage);
+        }
+    });
+    //        下一頁聊天記錄結束
+
+    //        最後一頁聊天記錄
+    $(".end-page").click(function () {
+        var to=$.cookie("to");
+        gethistory($.cookie("username"),to,$.cookie("countpage"));
+        $.cookie("page",$.cookie("countpage"));
+    });
+    //        最後一頁聊天記錄結束
+
+
+
+
+
+
+
+
+    $(".info_name").html($.cookie("nickname"));
+    $(".info_id").html($.cookie("username"));
+    //赋值用户名和ID
+
+
+    //打开历史记录
+    $("body").on("click",".wap_history",function () {
+        $(".history_div").show();
+        var to=$(".chat:visible").find("p").eq(1).html();
+
+        if( $(".history_record_div").html()!="" && to==$.cookie("to"))
+        {
+            return false;
+        }
+
+
+        gethistory($.cookie("username"),to,1);
+        $.cookie("to",to);
+        $.cookie("page",1);
+    });
+
+
+
+    $(".return").click(function () {
+        $(".history_div").hide();
+    })
+
+    $(".login_out_div").click(function () {
+        $.cookie("username",null);
+        $.cookie("nickname",null);
+        conn.close();
+    });
+//    退出
+
+
+
+    //點擊底部效果切換
+    $(".botton").find("div").eq(0).click(function () {
+       $('.contect_list').hide();
+        $(".chat_list").show();
+        $(".myset").hide();
+        $(".botton").find("img").eq(0).attr("src","images/chat2.png");
+        $(".botton").find("img").eq(1).attr("src","images/contect.png");
+        $(".botton").find("img").eq(2).attr("src","images/me.png");
+    });
+    $(".botton").find("div").eq(1).click(function () {
+        $('.contect_list').show();
+        $(".chat_list").hide();
+        $(".myset").hide();
+        $(".botton").find("img").eq(0).attr("src","images/chat.png");
+        $(".botton").find("img").eq(1).attr("src","images/contect2.png");
+        $(".botton").find("img").eq(2).attr("src","images/me.png");
+    });
+    $(".botton").find("div").eq(2).click(function () {
+        $('.contect_list').hide();
+        $(".chat_list").hide();
+        $(".myset").show();
+        $(".botton").find("img").eq(0).attr("src","images/chat.png");
+        $(".botton").find("img").eq(1).attr("src","images/contect.png");
+        $(".botton").find("img").eq(2).attr("src","images/me2.png");
+    });
+    //點擊底部效果切換
+
+    //发送图片
+    $("body").on("click",".wap_picture_button",function () {
+
+       $(".picture_input").trigger("click");
+    });
+    //发送图片结束
+
+
+    //发送文件
+    $("body").on("click",".wap_file_button",function () {
+
+        $(".file_input").trigger("click");
+    });
+
+    //发送文件结束
+    //關閉添加好友
+    $(".add-friend-img").click(function () {
+        $(".add-friend-page").toggle();
+    });
+    //打開添加好友
+    $(".top_right").click(function () {
+        $(".add-friend-page").toggle();
+    })
+
+    //        點擊按鈕添加好友
+    $(".add-friend-button").click(function () {
+        if($(".friend-name").val()=="")
+        {
+            return false;
+        }
+        else
+        {
+            addFriends($(".friend-name").val());
+            $(".friend-name").val("");
+            $(".add-friend-page").toggle();
+        }
+
+    });
+    //        點擊按鈕添加好友結束
+
+    //点击后退把聊天页隐藏
+    $("body").on("click",".left",function () {
+        $(".chat_page").hide(100);
+        $(".setting-list-div").hide();
+        if($(".send_else_div:visible").length>0){
+           $(".send_button").trigger("click");
+        }
+        if($(".emoji_div:visible").length>0){
+            $(".emoji").trigger("click");
+        }
+        $(".input_box").addClass("box_close");
+    });
+
+
+    //点击联系人出来聊天页
+    $("body").on("click",".contect",function () {
+        openChat($(this).find(".contect_name").html());
+
+    });
+    $("body").on("click",".chat_contect",function () {
+
+        openChat($(this).find(".name").html());
+    });
+    $("body").on("click",".emoje",function () {
+        $(".send_else_div").hide();
+        $(".emoji_div").show();
+        $(".input_box").toggleClass("box_close");
+    });
+    $("body").on("click",".send_button",function () {
+        $(".send_else_div").show();
+        $(".emoji_div").hide();
+        $(".input_box").toggleClass("box_close");
+    });
+
+
+    //打开聊天页
+    function openChat(name) {
+        $(".chat_page").show(100); //聊天页出来
+        $(".chat").hide();
+        $("."+name).show();
+        //打开界面
+        if($("."+name).parent(".chat_page").length > 0){
+
+        }
+        else
+        {
+            var chatStr=$(".chat_page").html();
+            chatStr='<div class="chat '+name+'"><div class="top"> <p class="left"><svg t="1502784354454" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="997" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M1013 448.4 247.6 448.4 607.2 93.2l-88.2-88L11 511.8 520 1018.8l86.6-87.2L247.8 571.2l765.2 0L1013 448.4z" p-id="998" fill="#ffffff"></path></svg></p> <p>'+name+'</p> <p class="info_rights" style="float: right"><svg t="1503034416461" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4726" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><style type="text/css"></style></defs><path d="M511.999983 76.493794c125.754386 0 228.325886 102.583663 228.325886 228.338049 0 125.766549-102.5715 228.338049-228.325886 228.338049-125.742223 0-228.338049-102.5715-228.338049-228.338049C283.661934 179.077457 386.25776 76.493794 511.999983 76.493794z" p-id="4727" fill="#ffffff"></path><path d="M906.291494 948.22383 117.708472 948.22383c7.249213-186.533443 180.987065-335.823445 394.291511-335.823445S899.054444 761.690387 906.291494 948.22383z" p-id="4728" fill="#ffffff"></path></svg></p></div> <div class="top_zhe"></div> </div>'+chatStr;
+            $(".chat_page").html(chatStr);
+        }
+
+        //添加到最近联系人
+        if($("."+name).parent(".chat_list").length > 0 ||$(".chat_list").find("."+name).length>0){
+            var str=$(".chat_list").find("."+name).prop("outerHTML");
+            $(".chat_list").find("."+name).remove();
+            var htmlStr=$(".chat_list").html();
+            htmlStr=str+htmlStr;
+            $(".chat_list").html(htmlStr);
+            $(".chat_list").find("."+name).find(".unread").hide();
+        }
+        else
+        {
+            var htmlStr=$(".chat_list").html();
+            htmlStr='<div class="chat_contect '+name+' "> <p class="unread hide" style="display: block;"></p><div class="contect_logo"> <img src="images/portrait.jpg" alt=""> </div> <div class="contect_xiangqing"> <div class="name">'+name+'</div> <div class="contect_zuijin"></div> </div> </div>'+htmlStr;
+            $(".chat_list").html(htmlStr);
+            $(".chat_list").find("."+name).find(".unread").hide();
+        }
+    }
+
+    $("body").on("focus",".input_box_top input",function () {
+        $(".input_box_top input").css("background",'white');
+    });
+    $("body").on("blur",".input_box_top input",function () {
+        $(".input_box_top input").css("background",'none');
+    })
+    $("body").on("keyup",".input_box_top input",function () {
+        if($(".input_box_top input").val()!=""&&$('.input_box_top input').val()!=null)
+        {
+            showSend();
+        }
+        else{
+            sendButton();
+        }
+    })
+
+
+
+
+    function showSend() {
+        $(".send_button").find("img").hide();
+        $(".send_button_div").show();
+    }
+    function sendButton() {
+        $(".send_button").find("img").show();
+        $(".send_button_div").hide();
+    }
+
+
+    //        發送文本
+    $("body").on("click",".send_button_div",function () {
+        var message=$(".input_box_top").find("input").val();
+        if(message==""){
+            return false;
+        }
+
+        var to=$(".chat:visible").find("p").eq(1).html();
+        sendMessages(message,to);
+//            添加發送的消息到聊天框
+        addSendMessage(escape(message));
+        $(".input_box_top").find("input").val('');
+        sendButton();
+        return false;
+    });
+    //        發送文本結束
+
+    //点击表情加到文本框
+    $("body").on("click",".emoji-li",function () {
+        $(".input_box_top").find("input").val($(".input_box_top").find("input").val()+$(this).attr("txt"));
+        showSend();
+    });
+    //添加表情
+    $("body").on("click",".input_box_top input",function () {
+
+        $(".input_box").addClass("box_close");
+    })
+
+    //        同意添加好友
+    $(".Agree-friend-button").click(function () {
+        var name=$(".agree-friend-name").html();
+        agreeAddFriend(name);
+        $(".receiveed_add_friend").toggle();
+    });
+    //        同意添加好友結束
+
+    //        拒绝添加对方为好友
+
+    $(".Refuse-friend-button").click(function () {
+        var name=$(".agree-friend-name").html();
+        refuseAddFriend(name);
+        $(".receiveed_add_friend").toggle();
+    });
+
+    //        拒绝添加对方为好友结束
+    
+    
+    //点击删除联系人
+    $("body").on("click",".info_rights",function () {
+
+        $(".setting-list-div").toggle();
+    })
+    $("body").on("click",".setting-deleterFriend-div",function () {
+
+        var to=$(".chat:visible").find("p").eq(1).html();
+        removeFriends(to);
+        $(".contect_"+to).remove();
+        $('.chat_list').find("."+to).remove();
+        $('.chat_page').find("."+to).remove();
+        $(".setting-list-div").toggle();
+        $(".chat_page").hide();
+
+    })
+    //    獲取get數據
+    function getGet() {
+        var aQuery = window.location.href.split("?");  //取得Get参数
+        var aGET = new Array();
+        if(aQuery.length > 1)
+        {
+            var aBuf = aQuery[1].split("&");
+            for(var i=0, iLoop = aBuf.length; i<iLoop; i++)
+            {
+                var aTmp = aBuf[i].split("=");  //分离key与Value
+                aGET[aTmp[0]] = aTmp[1];
+            }
+        }
+        return aGET;
+    }
+    //切換語言
+    $("body").on("click",".language_div",function () {
+        $.cookie('language','en',{path:'/'});
+        window.location.href="../index.html";
+    });
+
+
+
+</script>
