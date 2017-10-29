@@ -159,7 +159,7 @@ global.pool  = mysql.createPool({
   host            : 'localhost',
   user            : 'root',
   password        : '',
-  database        : 'english',
+  database        : 'chat',
   charset         :'utf8_general_ci'
 });//全局方法，打开数据库连接池
 global.sqlQuery=function(sql,callback){

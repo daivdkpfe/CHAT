@@ -665,7 +665,14 @@
                             okText: '确定',
                             cancelText: '取消'
                         });
-                        break;
+                    break;
+                    case 'queryerr':
+                    this.$Modal.error({
+                            title: '错误提示',
+                            content: '<p>查詢失敗</p>',
+                            okText: '确定',
+                            cancelText: '取消'
+                        });
                     
                 }
             }

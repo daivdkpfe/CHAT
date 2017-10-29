@@ -26,5 +26,38 @@ router.post('/',function(req,res,next){
      }
      run();
 })
+router.post("/query",function(req,res,next)
+{
+    var p1 =req.body.peopleone;
+    var p2 =req.body.peopletwo;
+    var start=(req.body.page-1)*30;
+    var end =(req.body.page)*30;
+    var page=req.body.page;
+    var sql=[];
+    sql.push(p1);
+    sql.push(p2);
+    sql.push(p2);
+    sql.push(p1);
 
+    async function run() {
+        var chat_log=await sqlasnyc('select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit '+start+','+end,sql);
+
+        if(chat_log!=0)
+        {
+            chat_log.forEach(function(element,index) {
+                chat_log[index]['time']=element['time'];
+            }, this);
+            if(page==1);
+            {
+                var count=await sqlasnyc('select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) ',sql);
+                console.log(count);
+                chat_log[0]['count']=count['0'].count;
+            }
+        }
+        
+        console.log(chat_log);
+        res.json(chat_log);
+    };
+    run();
+})
 module.exports = router;

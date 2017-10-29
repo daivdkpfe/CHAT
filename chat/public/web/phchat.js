@@ -674,13 +674,13 @@ function UTC(time) {
 }
 
 // 获取聊天记录
-function gethistory(peopleone,peopletwo,page) {
+function gethistory(peopleone,peopletwo,pages) {
     $.ajax({ url: "../chat/query",
         type:'post',
         data: {
             'peopleone':peopleone,
             "peopletwo":peopletwo,
-            "page":page
+            "page":pages
         },
         dataType: "json",
         success: function(req){
@@ -718,6 +718,11 @@ function gethistory(peopleone,peopletwo,page) {
                         var allMessages = "";
                         allMessages="<img class='send-img' src='"+req[i]["message"]+"'>";
                     }
+                    else if(req[i]['type']==3)
+                    {
+                        var allMessages = "";
+                        allMessages="<a href='"+req[i]["message"]+"'>Click Download</a>";
+                    }
                     $(".history-record-list").append('<p class="history-record-from">'+req[i]["from"]+'</p><p class="history-record-time">'+req[i]["time"]+'</p> <p class="history-record-message">'+allMessages+'</p>');
                 }
                 else
@@ -727,15 +732,14 @@ function gethistory(peopleone,peopletwo,page) {
 
 
             }
-            if(page==1)
+            if(pages==1)
             {
                 $.cookie("countpage",Math.ceil(req[0]["count"]/30));
             }
 
         },
         error:function (req) {
-            console.log(req);
-            alert("Query failed");
+            page.instance("queryerr");
         }
     });
 

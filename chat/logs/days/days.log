@@ -1,3 +1,112 @@
 [2017-10-29 08:42:37.238] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509237757,速度,1,web
 [2017-10-29 08:43:09.592] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509237790,是,1,web
 [2017-10-29 08:45:37.941] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509237938,[:'(],1,web
+[2017-10-29 08:58:18.968] [INFO] log_file - select * from chat_log where (from =? and to=?) or (from =? and to=?) order by timne desc limit 0,30    123,123456,123456,123
+[2017-10-29 08:58:18.996] [INFO] log_file - Caught exception:Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from ='123' and to='123456') or (from ='123456' and to='123') order by timne des' at line 1
+[2017-10-29 08:59:37.666] [INFO] log_file - select * from chat_log where (from =? and to=?) or (from =? and to=?) order by timne desc limit 0,30    123,123456,123456,123
+[2017-10-29 08:59:37.685] [INFO] log_file - Caught exception:Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from ='123' and to='123456') or (from ='123456' and to='123') order by timne des' at line 1
+[2017-10-29 09:03:16.824] [INFO] log_file - select * from `chat_log where` (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:03:16.844] [INFO] log_file - Caught exception:Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(`from` ='123' and `to`='123456') or (`from` ='123456' and `to`='123') order by ' at line 1
+[2017-10-29 09:04:01.674] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:04:01.694] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:06:14.173] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:06:14.183] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:06:41.868] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:06:41.893] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:07:23.385] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:07:23.414] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:07:24.715] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:07:24.726] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:10:47.949] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:10:47.976] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:11:25.139] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:11:25.145] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:11:28.100] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:11:28.109] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:11:29.604] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 60,90    123,123456,123456,123
+[2017-10-29 09:11:29.609] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:11:33.624] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 90,120    123,123456,123456,123
+[2017-10-29 09:11:33.629] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:11:34.127] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 120,150    123,123456,123456,123
+[2017-10-29 09:11:34.133] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:11:34.258] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 150,180    123,123456,123456,123
+[2017-10-29 09:11:34.263] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:11:36.606] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,1234,1234,123
+[2017-10-29 09:11:36.613] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,1234,1234,123
+[2017-10-29 09:11:38.754] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,1234,1234,123
+[2017-10-29 09:11:38.764] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,1234,1234,123
+[2017-10-29 09:11:41.392] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,15659529682,15659529682,123
+[2017-10-29 09:11:41.399] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,15659529682,15659529682,123
+[2017-10-29 09:11:42.697] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,15659529682,15659529682,123
+[2017-10-29 09:11:42.709] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,15659529682,15659529682,123
+[2017-10-29 09:11:42.869] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,15659529682,15659529682,123
+[2017-10-29 09:11:42.875] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,15659529682,15659529682,123
+[2017-10-29 09:11:43.042] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,15659529682,15659529682,123
+[2017-10-29 09:11:43.051] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,15659529682,15659529682,123
+[2017-10-29 09:11:45.356] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,15659529682,15659529682,123
+[2017-10-29 09:11:45.359] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,15659529682,15659529682,123
+[2017-10-29 09:11:45.505] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,15659529682,15659529682,123
+[2017-10-29 09:11:45.508] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,15659529682,15659529682,123
+[2017-10-29 09:11:45.644] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,15659529682,15659529682,123
+[2017-10-29 09:11:45.647] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,15659529682,15659529682,123
+[2017-10-29 09:11:46.993] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,15659529682,15659529682,123
+[2017-10-29 09:11:47.004] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,15659529682,15659529682,123
+[2017-10-29 09:12:35.128] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:12:35.148] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:12:36.105] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:12:36.115] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:13:38.455] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:13:38.477] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:13:41.519] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:13:41.530] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:14:08.998] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:14:09.012] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:14:09.963] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:14:09.977] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:16:02.900] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:16:02.927] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:16:08.346] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:16:16.855] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:16:16.860] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:16:19.399] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:16:21.620] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509239782,速度是否,1,web
+[2017-10-29 09:16:22.060] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:16:22.071] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:16:23.087] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:16:42.873] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 60,90    123,123456,123456,123
+[2017-10-29 09:16:47.408] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:16:47.419] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:16:52.774] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:17:14.780] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:17:14.789] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:17:19.546] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:17:24.223] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:17:24.229] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:17:45.733] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:17:45.759] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:17:48.497] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:19:25.386] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509239965,速度,1,web
+[2017-10-29 09:19:26.827] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509239967,速度個,1,web
+[2017-10-29 09:19:27.793] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509239968,覆蓋d,1,web
+[2017-10-29 09:19:33.022] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509239973,https://a1.easemob.com/1129170426178834/phchat/chatfiles/387c4e60-bc47-11e7-9963-e384311b7d38,3,web
+[2017-10-29 09:19:34.195] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509239974,發,1,web
+[2017-10-29 09:19:35.979] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:19:35.988] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:19:44.033] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:19:44.043] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:20:03.319] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:20:03.327] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:20:06.537] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 30,60    123,123456,123456,123
+[2017-10-29 09:20:07.120] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:20:07.127] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:20:07.870] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:20:07.887] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:20:08.646] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit NaN,NaN    123,123456,123456,123
+[2017-10-29 09:20:08.657] [INFO] log_file - Caught exception:Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NaN,NaN' at line 1
+[2017-10-29 09:20:47.919] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:20:47.948] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:22:35.208] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:22:35.213] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:22:59.721] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:22:59.726] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:23:28.644] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,168168,168168,123
