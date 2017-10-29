@@ -719,7 +719,7 @@ function UTC(time) {
 
 // 获取聊天记录
 function gethistory(peopleone,peopletwo,page) {
-    $.ajax({ url: "../chat?action=query",
+    $.ajax({ url: "../chat/query",
         type:'post',
         data: {
             'peopleone':peopleone,
@@ -749,8 +749,6 @@ function gethistory(peopleone,peopletwo,page) {
                                 allMessages = allMessages + '<img src=' + data[j]["data"] + ' class="message-emoji">';
                             }
                             else {
-
-
                                 allMessages = allMessages+data[j]["data"];
                             }
 
@@ -762,21 +760,22 @@ function gethistory(peopleone,peopletwo,page) {
                         var allMessages = "";
                         allMessages="<img class='send-img' src='"+req[i]["message"]+"'>";
                     }
-
+                    else if(req[i]['type']==3)
+                    {
+                        var allMessages = "";
+                        allMessages="<a href='"+req[i]["message"]+"'>Click Download</a>";
+                    }
                     $(".history_record_div").append('<p class="history-record-from">'+req[i]["from"]+'</p><p class="history-record-time">'+req[i]["time"]+'</p> <p class="history-record-message">'+allMessages+'</p>');
                 }
                 else
                 {
                     $(".history_record_div").append("<p class='no_history-record-list'>No history record</p>")
                 }
-
-
             }
             if(page==1)
             {
                 $.cookie("countpage",Math.ceil(req[0]["count"]/30));
             }
-
         },
         error:function (req) {
             console.log(req);

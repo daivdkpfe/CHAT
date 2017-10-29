@@ -110,3 +110,15 @@
 [2017-10-29 09:22:59.721] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
 [2017-10-29 09:22:59.726] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
 [2017-10-29 09:23:28.644] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,168168,168168,123
+[2017-10-29 09:38:56.307] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509241136,速度,1,web
+[2017-10-29 09:42:49.932] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,1234,1509241370,速度,1,web
+[2017-10-29 09:47:59.873] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509241680,sd ,1,web
+[2017-10-29 09:48:00.874] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:48:00.886] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:48:13.625] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509241694,https://a1.easemob.com/1129170426178834/phchat/chatfiles/3a07ac80-bc4b-11e7-91c2-a532c02007fa,3,web
+[2017-10-29 09:48:24.318] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:48:24.323] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:53:00.239] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    123,123456,123456,123
+[2017-10-29 09:53:00.255] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     123,123456,123456,123
+[2017-10-29 09:53:12.811] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509241993,sd ,1,web
+[2017-10-29 09:56:59.333] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1509242219,速度,1,web

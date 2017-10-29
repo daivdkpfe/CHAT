@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
   }
   else{
     if(agentID){
-      res.redirect('./wab');//重定向
+      res.redirect('./wap');//重定向
     }else{
       res.redirect('./web');//重定向
     }
