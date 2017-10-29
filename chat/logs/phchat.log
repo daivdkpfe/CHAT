@@ -179,3 +179,34 @@
 [2017-10-29 15:50:03.747] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmall,6309123123123
 [2017-10-29 15:50:03.773] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>?    6309123123123,434552,1509263104
 [2017-10-29 15:50:03.778] [INFO] log_file - insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?    admin,phmall,aa1fe13d4798d295cd28af3ecd94084e,cGhtYWxs,6309123123123,1509263404
+[2017-10-29 16:01:00.665] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmall,6309123123123
+[2017-10-29 16:01:08.353] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmall,6309123123124
+[2017-10-29 16:01:08.363] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309123123124
+[2017-10-29 16:01:09.386] [INFO] log_file - insert into `send_code` set phone_num=?,send_time=?,type=?,code=?    6309123123124,1509264069,1,713749
+[2017-10-29 16:01:22.966] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmall,6309123123124
+[2017-10-29 16:01:22.970] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>?    6309123123124,434552,1509263783
+[2017-10-29 16:01:39.003] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmall,6309123123124
+[2017-10-29 16:01:39.007] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>?    6309123123124,713749,1509263799
+[2017-10-29 16:01:39.015] [INFO] log_file - insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?    admin,phmall,aa1fe13d4798d295cd28af3ecd94084e,cGhtYWxs,6309123123124,1509264099
+[2017-10-29 16:07:13.899] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmalladmin,6309123123125
+[2017-10-29 16:07:13.925] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309123123125
+[2017-10-29 16:07:15.967] [INFO] log_file - insert into `send_code` set phone_num=?,send_time=?,type=?,code=?    6309123123125,1509264436,1,355274
+[2017-10-29 16:07:44.147] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmalladmin,6309123123125
+[2017-10-29 16:07:44.152] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>?    6309123123125,355274,1509264164
+[2017-10-29 16:07:44.157] [INFO] log_file - insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?    admin,phmalladmin,aa1fe13d4798d295cd28af3ecd94084e,cGhtYWxs,6309123123125,1509264464
+[2017-10-29 16:09:14.214] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmalladmin,6309123123125
+[2017-10-29 16:09:17.147] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmalladmin,6309123123125
+[2017-10-29 16:09:24.817] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admin,phmalladmin,6309123123126
+[2017-10-29 16:09:24.822] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309123123126
+[2017-10-29 16:09:26.231] [INFO] log_file - insert into `send_code` set phone_num=?,send_time=?,type=?,code=?    6309123123126,1509264566,1,334729
+[2017-10-29 16:09:46.909] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    admins,phmalladmin,6309123123126
+[2017-10-29 16:09:46.913] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>?    6309123123126,334729,1509264287
+[2017-10-29 16:09:46.919] [INFO] log_file - insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?    admins,phmalladmin,aa1fe13d4798d295cd28af3ecd94084e,cGhtYWxs,6309123123126,1509264587
+[2017-10-29 16:12:02.361] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    suqi11,suqi11,6309999999999
+[2017-10-29 16:12:02.386] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309999999999
+[2017-10-29 16:12:04.998] [INFO] log_file - insert into `send_code` set phone_num=?,send_time=?,type=?,code=?    6309999999999,1509264725,1,983164
+[2017-10-29 16:12:15.264] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    suqi11,suqi11,6309999999999
+[2017-10-29 16:12:15.269] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>?    6309999999999,983164,1509264435
+[2017-10-29 16:12:15.276] [INFO] log_file - insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?    suqi11,suqi11,a405d55742b279270c174e7defa9c202,c3VxaTEx,6309999999999,1509264735
+[2017-10-29 16:55:48.213] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    gxc123456,gxc123456,63
+[2017-10-29 16:55:48.224] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>?    63,,1509267048

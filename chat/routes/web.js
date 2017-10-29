@@ -82,6 +82,8 @@ router.post('/register',function(req,res,next){
         sql.push(phone);
         sql.push(get_now_time());        
         await sqlasnyc('insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?',sql);
+        user.createUser(id, password);
+        user.editNickname(id, username);
         res.json(1);
       }
       else{

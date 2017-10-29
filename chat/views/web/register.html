@@ -37,11 +37,15 @@
         <img class="logo" src="images/logo1.png" alt="">
         <div class="login" style="height: 420px">
             <div class="h20"></div>
+
+
+
+           
             <i-input v-model="id" placeholder="请输入ID" style="width: 300px" class="input_box"></i-input>
-            <i-input v-model="username" placeholder="请输入用戶名" style="width: 300px" class="input_box"></i-input>
-            <i-input v-model="password" placeholder="请输入密碼" style="width: 300px" class="input_box"></i-input>
-            <i-input v-model="configpas" placeholder="请再次輸入密碼" style="width: 300px" class="input_box"></i-input>
-            <I-input v-model="phone" style="width:300px;margin:20px 0 0 50px;" placeholder="验证码">
+            <i-input v-model="username" placeholder="请输入昵称" style="width: 300px" class="input_box"></i-input>
+            <i-input v-model="password" type="password" placeholder="请输入密碼" style="width: 300px" class="input_box"></i-input>
+            <i-input v-model="configpas" type="password" placeholder="请再次輸入密碼" style="width: 300px" class="input_box"></i-input>
+            <I-input v-model="phone" style="width:300px;margin:20px 0 0 50px;" placeholder="手机号码" >
                 <span slot="prepend">+63</span>
             </I-input>
 
@@ -49,7 +53,7 @@
             <!-- <i-Button type="primary"  loading></i-Button> -->
             <i-input v-model="code" placeholder="请輸入验证码" style="width: 229px;float:left;margin-right:0" class="input_box"></i-input>
             <i-Button type="primary" :loading="loading" @click="toLoading()" style="float:left;margin-top:20px;margin-left:10px;width: 60px;
-            text-align: center;">
+            text-align: center;" number='true'>
                 <span v-if="!loading">Send</span>
                 <span v-else></span>
             </i-Button>
@@ -80,10 +84,24 @@
             loading:false
         },
         methods:{
+            test:function(){
+                var t=this;
+                t.instance('regsuccess');
+            },
             toLoading:function(){
                 var t=this;
+                
+
+
+
                 if(!t.loading)
                 {
+
+                    if(t.phone.length!=10 || t.phone.length!=11)
+                {
+                    t.instance('phoneerr');
+                    return false;
+                }
                 t.loading=true;
                 $.post('./send',{id:this.id,username:this.username,phone:this.phone},function(result){
                     if(result==1)
@@ -120,6 +138,36 @@
             register:function(){
                 var t=this;
                 //先做正则啊密码什么的验证
+
+                if(t.id=="" || t.id.match(/^\w+$/)==null|| t.id.length>16 ||t.id.length<8 )
+                {
+                    t.instance('usernameerr');
+                    return false;
+                } 
+
+                if(t.password=="" || t.password.match(/^\w+$/)==null|| t.password.length>16 ||t.password.length<8 )
+                {
+                    t.instance('passerr');
+                    return false;
+                } 
+
+                if(t.usernmae=="" || t.username.match(/^\w+$/)==null|| t.username.length>16 ||t.username.length<8 )
+                {
+                    t.instance('usernameerr');
+                    return false;
+                    
+                } 
+                if(t.configpas!= t.password)
+                {
+                    t.instance('passnolike');
+                    return false;
+                }
+                if(t.phone.length!=10 || t.phone.length!=11)
+                {
+                    t.instance('phoneerr');
+                    return false;
+                }
+
                 $.post('./register',{id:this.id,username:this.username,phone:this.phone,password:this.password,code:this.code},function(result){
                     console.log(result);
                     if(result==1){
@@ -152,6 +200,46 @@
                         this.$Modal.error({
                             title: "发送失败",
                             content: "请点击发送按钮重新发送",
+                            okText: 'OK',
+                    cancelText: 'Cancel'
+                        });
+                        break;
+                        case 'usernameerr':
+                        this.$Modal.error({
+                            title: "注意",
+                            content: "用户名必须为8-16为数字加英文",
+                            okText: 'OK',
+                    cancelText: 'Cancel'
+                        });
+                        break;
+                        case 'iderr':
+                        this.$Modal.error({
+                            title: "注意",
+                            content: "ID必须为8-16为数字加英文",
+                            okText: 'OK',
+                    cancelText: 'Cancel'
+                        });
+                        break;
+                        case 'passerr':
+                        this.$Modal.error({
+                            title: "注意",
+                            content: "密码必须为8-16为数字加英文",
+                            okText: 'OK',
+                    cancelText: 'Cancel'
+                        });
+                        break;
+                        case 'phoneerr':
+                        this.$Modal.error({
+                            title: "注意",
+                            content: "手机号码格式错误",
+                            okText: 'OK',
+                    cancelText: 'Cancel'
+                        });
+                        break;
+                        case 'passnolike':
+                        this.$Modal.error({
+                            title: "注意",
+                            content: "两次输入的密码不一致",
                             okText: 'OK',
                     cancelText: 'Cancel'
                         });
@@ -202,10 +290,10 @@
                             title: "注册成功",
                             content: "注册成功，请登录帐号",
                             okText: 'OK',
-                        cancelText: 'Cancel',
-                        onOK:()=>{
-                            window.location.href('../');
-                        }
+                            onOk: () => {
+                                window.location.href="../";
+                            this.$Message.info('点击了确定');
+                            }
                         });
                         break;
                 }
