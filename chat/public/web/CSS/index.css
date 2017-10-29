@@ -139,7 +139,7 @@ color: orange;
 text-align: center;
 }
 .else-login img{
-width: 25px;
+width: 45px;
 padding: 5px;
 border: 2px solid #FFA500;
 border-radius: 50px;
@@ -879,4 +879,12 @@ margin-left: 62.5px;
     /* margin-top: 300px; */
     margin: 0 auto;
     margin-top: 350px;
+}
+.login-txt-left a{
+    line-height: 38px;
+    color: #feb90c;
+}
+.login-txt-right a{
+    line-height: 38px;
+    color: #feb90c;
 }

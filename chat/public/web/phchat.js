@@ -675,7 +675,7 @@ function UTC(time) {
 
 // 获取聊天记录
 function gethistory(peopleone,peopletwo,page) {
-    $.ajax({ url: "../chat?action=query",
+    $.ajax({ url: "../chat/query",
         type:'post',
         data: {
             'peopleone':peopleone,

@@ -1,10 +1,3 @@
-[2017-10-28 10:28:03.353] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    
-[2017-10-28 10:28:03.376] [INFO] log_file - Caught exception:Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?,?,?,?,?,?)' at line 1
-[2017-10-28 10:28:40.683] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    ,123,123456,1509157721,速度,1,web
-[2017-10-28 10:28:40.717] [INFO] log_file - Caught exception:Error: ER_BAD_NULL_ERROR: Column 'from' cannot be null
-[2017-10-28 10:29:36.745] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509157777,s的返多少,1,web
-[2017-10-28 11:12:11.437] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509160331,速度,1,web
-[2017-10-28 11:27:56.026] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509161276,速度速度,1,web
-[2017-10-28 11:27:59.458] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509161279,[+o(],1,web
-[2017-10-28 11:28:12.385] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509161292,https://a1.easemob.com/1129170426178834/phchat/chatfiles/073ecb50-bb90-11e7-b218-d96954d54808,2,web
-[2017-10-28 11:44:08.597] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509162249,速度,1,web
+[2017-10-29 08:42:37.238] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509237757,速度,1,web
+[2017-10-29 08:43:09.592] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509237790,是,1,web
+[2017-10-29 08:45:37.941] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1509237938,[:'(],1,web
