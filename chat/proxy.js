@@ -12,6 +12,11 @@ var server = require('http').createServer(function (req, res) {
                 target: 'http://localhost:3000'
             });
             break;
+             case 'chat.meishenmeyong.com':
+            proxy.web(req, res, {
+                target: 'http://localhost:3000'
+            });
+            break;
         case 'admin.ganxiaochuan.top':
             proxy.web(req, res, {
                 target: 'http://localhost:3001'

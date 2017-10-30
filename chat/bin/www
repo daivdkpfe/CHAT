@@ -168,7 +168,7 @@ global.pool  = mysql.createPool({
   connectionLimit : 100,
   host            : 'localhost',
   user            : 'root',
-  password        : '',//database
+  password        : 'root',//database
   database        : 'chat',
   charset         :'utf8_general_ci'
 });//全局方法，打开数据库连接池
