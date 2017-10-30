@@ -168,7 +168,7 @@ global.pool  = mysql.createPool({
   connectionLimit : 100,
   host            : 'localhost',
   user            : 'root',
-  password        : 'root',//database
+  password        : '',//database
   database        : 'chat',
   charset         :'utf8_general_ci'
 });//全局方法，打开数据库连接池
@@ -246,15 +246,15 @@ console.log(fp);
         console.log(body);
       if(body=='2000 = SUCCESS')
       {
-        callback(1);
+        callback(1);//發送成功
       }
       else{
-        callback(0);
+        callback(0);//發送失敗
       }
     }
     else
     {
-     callback(-1);
+     callback(-1);//鏈接失敗
     }
   });
 }

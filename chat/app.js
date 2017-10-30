@@ -11,7 +11,7 @@ var users = require('./routes/users');
 var web = require('./routes/web');
 var wap = require('./routes/wap');
 var chat = require('./routes/chat');
-
+var register = require('./routes/register');
 var app = express();
 
 // view engine setup
@@ -32,6 +32,9 @@ app.use('/users', users);
 app.use('/web', web);
 app.use('/wap', wap);
 app.use('/chat', chat);
+app.use('/register', register);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PHCHAT</title>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="../jquery-3.2.1.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script> -->
+    <script src="jquery.cookie.js"></script>
+    <script type='text/javascript' src='webim.config.js'></script>
+    <script type='text/javascript' src='strophe-1.2.8.min.js'></script>
+    <script type='text/javascript' src='websdk-1.4.10.js'></script>
+    <script src="//vuejs.org/js/vue.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <!-- 引入组件库 -->
+    <script src="//unpkg.com/iview/dist/iview.min.js"></script>
+
+
+    <style>
+        .input_box {
+            margin: 0 50px;
+            margin-top: 20px;
+        }
+    </style>
+
+
+
+
+    <div class="main-div" id="main-div">
+
+        <div class="main">
+
+
+            <img class="logo" src="images/logo1.png" alt="">
+            <div class="login" style="height: 420px">
+                <div class="h20"></div>
+
+
+
+                <div v-show='setp==1'>
+
+                    <i-input v-model="id" placeholder="请输入ID" style="width: 300px" class="input_box"></i-input>
+                    <I-input v-model="phone" style="width:300px;margin:20px 0 0 50px;" placeholder="手机号码">
+                        <span slot="prepend">+63</span>
+                    </I-input>
+
+
+                    <!-- <i-Button type="primary"  loading></i-Button> -->
+                    <i-input v-model="code" placeholder="请輸入验证码" style="width: 229px;float:left;margin-right:0" class="input_box"></i-input>
+                    <i-Button type="primary" :loading="loading" @click="toLoading()" style="float:left;margin-top:20px;margin-left:10px;width: 60px;
+            text-align: center;" number='true'>
+                        <span v-if="!loading">Send</span>
+                        <span v-else></span>
+                    </i-Button>
+                    <p class="login-txt-left">
+                        <a href="../">Login</a>
+                    </p>
+                    <div class="btn-login-div">
+                        <button class="btn-login" @click="find()">Next</button>
+                    </div>
+
+                </div>
+
+                <div v-show="setp==2">
+                    <i-input v-model="password" type="password" placeholder="请输入密碼" style="width: 300px" class="input_box"></i-input>
+
+                    <i-input v-model="configpas" type="password" placeholder="请输入密碼" style="width: 300px" class="input_box"></i-input>
+
+                    <p class="login-txt-left">
+                        <a href="../">Login</a>
+                    </p>
+                    <div class="btn-login-div">
+                        <button class="btn-login" @click="changepass()">Submit</button>
+                    </div>
+                </div>
+
+                <!--第三方登錄-->
+            </div>
+
+        </div>
+    </div>
+    <script src="phchat.js"></script>
+    <script>
+        var page = new Vue({
+            el: '#main-div',
+            data: {
+                id: '',
+                username: '',
+                password: '',
+                configpas: '',
+                phone: '',
+                code: '',
+                loading: false,
+                setp: 1
+            },
+            methods: {
+                instance(type, title, message, btn1, btn2, callback = "") {
+                    switch (type) {
+                        case 'success':
+                            this.$Modal.success({
+                                title: title,
+                                content: message,
+                                okText: btn1,
+                                cancelText: btn2
+                            });
+                            break;
+                        case 'info':
+                            this.$Modal.info({
+                                title: title,
+                                content: message,
+                                okText: btn1,
+                                cancelText: btn2,
+
+                            });
+                            break;
+                        case 'warning':
+                            this.$Modal.warning({
+                                title: title,
+                                content: message,
+                                okText: btn1,
+                                cancelText: btn2
+                            });
+                            break;
+                        case 'error':
+                            this.$Modal.error({
+                                title: title,
+                                content: message,
+                                okText: btn1,
+                                cancelText: btn2
+                            });
+                            break;
+
+                    }
+                },
+                find() {
+                    var t = this;
+
+                    // if(t.password=="" || t.password.match(/^\w+$/)==null|| t.password.length>16 ||t.password.length<8 )
+                    // {
+                    // t.instance('error','提示','密码必须为8-16为数字加英文','OK',"CANCEL");
+                    // return false;
+                    // } 
+
+                    if (t.phone.length != 10 || t.phone.length != 11) {
+                        t.instance('error', '提示', '請輸入正確的電話號碼', 'OK', 'CANCEL');
+                        return false;
+                    }
+                    if (t.id == "") {
+                        t.instance('error', '提示', '請輸入ID', 'OK', 'CANCEL');
+                        return false;
+                    }
+                    if (t.code == "") {
+                        t.instance('error', '提示', '請輸入驗證碼', 'OK', 'CANCEL');
+                        return false;
+                    }
+                },
+                toLoading(){
+                    var t=this;
+                    
+                    if (t.phone.length != 10 && t.phone.length != 11) {
+                        t.instance('error', '提示', '請輸入正確的電話號碼', 'OK', 'CANCEL');
+                        return false;
+                    }
+                    if (t.id == "") {
+                        t.instance('error', '提示', '請輸入ID', 'OK', 'CANCEL');
+                        return false;
+                    }
+                    $.post('./findsend',{
+                        phone:t.phone,
+                        id:t.id
+                    },function(result){
+                        console.log(result);
+                        if(result==-2){
+                            t.instance('error', '提示', '找不到用户', 'OK', 'CANCEL');
+                        }
+                        else if(result==1)
+                        {
+                            t.instance('success', '恭喜', '发送成功，请查看手机验证码', 'OK', 'CANCEL');
+                        }
+                        else if(result==-3){
+                            t.instance('error', '提示', '发送过于频繁，请稍等', 'OK', 'CANCEL');
+                        }
+                        else{
+                            t.instance('error', '提示', '发送失败', 'OK', 'CANCEL');
+                        }
+                    })
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
