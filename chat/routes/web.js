@@ -37,7 +37,7 @@ router.post('/findsend', function (req, res, next) {
           sms_send(phone, txt, function (result) {
             if (result == 1) {
 
-              sqlQueryMore("update `send_code` set phone_num=?,send_time=?,type=?,code=?,m_uid=? where uid=?", [phone, get_now_time(), 1, code, member[0].uid,sms[0].uid], function (result) {
+              sqlQueryMore("update `send_code` set phone_num=?,send_time=?,type=?,code=?,m_uid=? where uid=?", [phone, get_now_time(), 2, code, member[0].uid,sms[0].uid], function (result) {
                 res.json(1); //發送成功
               });
             } else if (result == -1) {
@@ -136,7 +136,7 @@ router.post('/register', function (req, res, next) {
   async function run() {
     var member = await sqlasnyc("select * from `member_table` where member_id=? or member_tel=?", [id, username, phone]);
     if (member == 0) {
-      var sms = await sqlasnyc('select * from `send_code` where phone_num=? and code=? and send_time>?', [phone, code, get_now_time() - 60 * 5]);
+      var sms = await sqlasnyc('select * from `send_code` where phone_num=? and code=? and send_time>? and type=1', [phone, code, get_now_time() - 60 * 5]);
       if (sms != 0) {
         var sql = [];
         sql.push(id);
@@ -155,6 +155,36 @@ router.post('/register', function (req, res, next) {
     } else {
       res.json(0); //用户已存在
     }
+  }
+  run();
+});
+router.post('/change',function(req,res,next){
+  var phone = '63' + req.body.phone;
+  var id = req.body.id;
+  var password = req.body.password;
+  var code = req.body.code;
+  async function run() {
+    var member = await sqlasnyc("select * from `member_table` where member_id=? and member_tel=?", [id, phone]);
+    var sms = await sqlasnyc('select * from `send_code` where phone_num=? and code=? and send_time>? and type=2', [phone, code, get_now_time() - 60 * 5]);
+    if(member==0)
+    {
+      res.json(-3)//找不到用戶
+      return;
+    }
+    if(sms==0){
+      res.json(-2)//無效的驗證碼
+      return;
+    }
+    var sql=[];
+    sql.push(md5(password));
+    sql.push(new Buffer(password).toString('base64'));
+    sql.push(id);
+    sql.push(phone);
+    await sqlasnyc('update `member_table` set member_pass=?,base_pass=? where member_id=? and member_tel=?',sql);
+    res.json(1);//更改成功
+  
+    user.resetPassword(id,return_base64(member[0].base_pass),password);
+
   }
   run();
 })

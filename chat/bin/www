@@ -362,7 +362,11 @@ global.transform=function(obj){
   return arr;
 }//對象轉數組
 
-
+global.return_base64=function(txt){
+    var b =new Buffer(txt, 'base64');
+    var s = b.toString();
+    return s;
+}
 global.urlencode=function(clearString)
 {
   var output = '';

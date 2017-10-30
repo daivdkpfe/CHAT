@@ -37,7 +37,7 @@
 
 
             <img class="logo" src="images/logo1.png" alt="">
-            <div class="login" style="height: 420px">
+            <div class="login" style="height:300px">
                 <div class="h20"></div>
 
 
@@ -134,7 +134,17 @@
                                 cancelText: btn2
                             });
                             break;
-
+                        case 'successchange':
+                        this.$Modal.success({
+                                title: title,
+                                content: message,
+                                okText: btn1,
+                                cancelText: btn2,
+                                onOk: () => {
+                                    window.location.href = "../";
+                                    
+                                }
+                            });
                     }
                 },
                 find() {
@@ -146,7 +156,7 @@
                     // return false;
                     // } 
 
-                    if (t.phone.length != 10 || t.phone.length != 11) {
+                    if (t.phone.length != 10 && t.phone.length != 11) {
                         t.instance('error', '提示', '請輸入正確的電話號碼', 'OK', 'CANCEL');
                         return false;
                     }
@@ -158,39 +168,79 @@
                         t.instance('error', '提示', '請輸入驗證碼', 'OK', 'CANCEL');
                         return false;
                     }
+                    t.setp = 2;
                 },
-                toLoading(){
-                    var t=this;
-                    
+                toLoading() {
+                    var t = this;
+                    if (!t.loading) {
+                    t.loading = true;
+
                     if (t.phone.length != 10 && t.phone.length != 11) {
                         t.instance('error', '提示', '請輸入正確的電話號碼', 'OK', 'CANCEL');
                         return false;
+                        t.loading=false;
                     }
                     if (t.id == "") {
                         t.instance('error', '提示', '請輸入ID', 'OK', 'CANCEL');
                         return false;
+                        t.loading=false;
                     }
-                    $.post('./findsend',{
-                        phone:t.phone,
-                        id:t.id
-                    },function(result){
+                    $.post('./findsend', {
+                        phone: t.phone,
+                        id: t.id
+                    }, function (result) {
                         console.log(result);
-                        if(result==-2){
+                        if (result == -2) {
                             t.instance('error', '提示', '找不到用户', 'OK', 'CANCEL');
-                        }
-                        else if(result==1)
-                        {
+                            t.loading=false;
+                        } else if (result == 1) {
                             t.instance('success', '恭喜', '发送成功，请查看手机验证码', 'OK', 'CANCEL');
-                        }
-                        else if(result==-3){
+                            t.loading = true;
+                                setTimeout(() => {
+                                    t.loading = false;
+                                }, 60000);
+                        } else if (result == -3) {
                             t.instance('error', '提示', '发送过于频繁，请稍等', 'OK', 'CANCEL');
-                        }
-                        else{
+                            t.loading=false;
+                        } else {
                             t.instance('error', '提示', '发送失败', 'OK', 'CANCEL');
+                            t.loading=false;
                         }
                     })
                 }
+                },
+                changepass() {
+                    var t = this;
+                    if (t.password != t.configpas) {
+                        t.instance('error', '提示', '兩次輸入的密碼不一致', 'OK', 'CANCEL');
+                        return false;
+                    }
+                    if (t.password == "" || t.password.match(/^\w+$/) == null || t.password.length > 16 || t.password
+                        .length < 8) {
+                        t.instance('error', '提示', '密碼必須是長度8-16的數字和英文組合', 'OK', 'CANCEL');
+                        return false;
+                    }
+                    $.post('./change', {
+                        id: t.id,
+                        password: t.password,
+                        code: t.code,
+                        phone: t.phone
+                    }, function (result) {
+                        console.log(result);
+                        if(result==-3){
+                            t.instance('error', '提示', '找不到指定用戶', 'OK', 'CANCEL');
+                        }
+                        if(result==-2){
+                            t.instance('error', '提示', '無效驗證碼', 'OK', 'CANCEL');
+                        }
+                        if(result==1){
+                            t.instance('successchange', '恭喜', '修改成功', 'OK', 'CANCEL');
+                        }
+                    })
+                }
+
             }
+
         });
     </script>
 </body>

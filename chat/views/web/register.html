@@ -1,338 +1,337 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <title>PHCHAT</title>
 </head>
+
 <body>
 
-<link rel="stylesheet" href="CSS/index.css">
-<script src="../jquery-3.2.1.js"></script>
-<!-- <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script> -->
-<script src="jquery.cookie.js"></script>
-<script type='text/javascript' src='webim.config.js'></script>
-<script type='text/javascript' src='strophe-1.2.8.min.js'></script>
-<script type='text/javascript' src='websdk-1.4.10.js'></script>
-<script src="//vuejs.org/js/vue.min.js"></script>
-<!-- 引入样式 -->
-<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
-<!-- 引入组件库 -->
-<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="../jquery-3.2.1.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script> -->
+    <script src="jquery.cookie.js"></script>
+    <script type='text/javascript' src='webim.config.js'></script>
+    <script type='text/javascript' src='strophe-1.2.8.min.js'></script>
+    <script type='text/javascript' src='websdk-1.4.10.js'></script>
+    <script src="//vuejs.org/js/vue.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <!-- 引入组件库 -->
+    <script src="//unpkg.com/iview/dist/iview.min.js"></script>
 
 
-<style>
-    .input_box{
-        margin: 0 50px;
-        margin-top: 20px;
-    }
-</style>
-
-
-
-
-<div class="main-div" id="main-div">
-   
-    <div class="main">
-
-        
-        <img class="logo" src="images/logo1.png" alt="">
-        <div class="login" style="height: 420px">
-            <div class="h20"></div>
+    <style>
+        .input_box {
+            margin: 0 50px;
+            margin-top: 20px;
+        }
+    </style>
 
 
 
-           
-            <i-input v-model="id" placeholder="请输入ID" style="width: 300px" class="input_box"></i-input>
-            <i-input v-model="username" placeholder="请输入昵称" style="width: 300px" class="input_box"></i-input>
-            <i-input v-model="password" type="password" placeholder="请输入密碼" style="width: 300px" class="input_box"></i-input>
-            <i-input v-model="configpas" type="password" placeholder="请再次輸入密碼" style="width: 300px" class="input_box"></i-input>
-            <I-input v-model="phone" style="width:300px;margin:20px 0 0 50px;" placeholder="手机号码" >
-                <span slot="prepend">+63</span>
-            </I-input>
 
-            
-            <!-- <i-Button type="primary"  loading></i-Button> -->
-            <i-input v-model="code" placeholder="请輸入验证码" style="width: 229px;float:left;margin-right:0" class="input_box"></i-input>
-            <i-Button type="primary" :loading="loading" @click="toLoading()" style="float:left;margin-top:20px;margin-left:10px;width: 60px;
+    <div class="main-div" id="main-div">
+
+        <div class="main">
+
+
+            <img class="logo" src="images/logo1.png" alt="">
+            <div class="login" style="height: 420px">
+                <div class="h20"></div>
+
+
+
+
+                <i-input v-model="id" placeholder="请输入ID" style="width: 300px" class="input_box"></i-input>
+                <i-input v-model="username" placeholder="请输入昵称" style="width: 300px" class="input_box"></i-input>
+                <i-input v-model="password" type="password" placeholder="请输入密碼" style="width: 300px" class="input_box"></i-input>
+                <i-input v-model="configpas" type="password" placeholder="请再次輸入密碼" style="width: 300px" class="input_box"></i-input>
+                <I-input v-model="phone" style="width:300px;margin:20px 0 0 50px;" placeholder="手机号码">
+                    <span slot="prepend">+63</span>
+                </I-input>
+
+
+                <!-- <i-Button type="primary"  loading></i-Button> -->
+                <i-input v-model="code" placeholder="请輸入验证码" style="width: 229px;float:left;margin-right:0" class="input_box"></i-input>
+                <i-Button type="primary" :loading="loading" @click="toLoading()" style="float:left;margin-top:20px;margin-left:10px;width: 60px;
             text-align: center;" number='true'>
-                <span v-if="!loading">Send</span>
-                <span v-else></span>
-            </i-Button>
-            <!-- <input type="text" class="web-input" placeholder="ID" name="id">
+                    <span v-if="!loading">Send</span>
+                    <span v-else></span>
+                </i-Button>
+                <!-- <input type="text" class="web-input" placeholder="ID" name="id">
             <input type="text" class="web-input" placeholder="Username" name="username">
             <input type="password" class="web-input" placeholder="Password" name="password">
             <input type="password" class="web-input" placeholder="Confirm password" name="repassword"> -->
-            <p class="login-txt-left"><a href="../">Login</a></p>
-            <div class="btn-login-div">
-                <button class="btn-login" @click="register()">Register</button>
+                <p class="login-txt-left">
+                    <a href="../">Login</a>
+                </p>
+                <div class="btn-login-div">
+                    <button class="btn-login" @click="register()">Register</button>
+                </div>
+                <!--第三方登錄-->
             </div>
-            <!--第三方登錄-->
+
         </div>
-    
     </div>
-</div>
-<script src="phchat.js"></script>
-<script>
-    var page= new Vue({
-        el:'#main-div',
-        data:{
-            id:'',
-            username:'',
-            password:'',
-            configpas:'',
-            phone:'',
-            code:'',
-            loading:false
-        },
-        methods:{
-            test:function(){
-                var t=this;
-                t.instance('regsuccess');
+    <script src="phchat.js"></script>
+    <script>
+        var page = new Vue({
+            el: '#main-div',
+            data: {
+                id: '',
+                username: '',
+                password: '',
+                configpas: '',
+                phone: '',
+                code: '',
+                loading: false
             },
-            toLoading:function(){
-                var t=this;
-                
+            methods: {
+                test: function () {
+                    var t = this;
+                    t.instance('regsuccess');
+                },
+                toLoading: function () {
+                    var t = this;
 
 
 
-                if(!t.loading)
-                {
 
-                    if(t.phone.length!=10 || t.phone.length!=11)
-                {
-                    t.instance('phoneerr');
-                    return false;
-                }
-                t.loading=true;
-                $.post('./send',{id:this.id,username:this.username,phone:this.phone},function(result){
-                    if(result==1)
-                    {
-                        t.instance('success');
-                        t.loading=true;
-                        setTimeout(() => {
-                            t.loading=false;
-                        }, 60000);
-                    }
-                    else if(result==1){
-                        t.instance('error');
-                        t.loading=false;
-                    }
-                    else if(result==0)
-                    {
-                        t.instance('admin');
-                        t.loading=false;
-                    }
-                    else if(result==-2)
-                    {
-                        t.instance('used');
-                        t.loading=false;
-                    }
-                    else if(result==-3)
-                    {
-                        t.instance('pf');
-                        t.loading=false;
-                    }
-                })
-                }
-                
-            },
-            register:function(){
-                var t=this;
-                //先做正则啊密码什么的验证
+                    if (!t.loading) {
 
-                if(t.id=="" || t.id.match(/^\w+$/)==null|| t.id.length>16 ||t.id.length<8 )
-                {
-                    t.instance('usernameerr');
-                    return false;
-                } 
-
-                if(t.password=="" || t.password.match(/^\w+$/)==null|| t.password.length>16 ||t.password.length<8 )
-                {
-                    t.instance('passerr');
-                    return false;
-                } 
-
-                if(t.usernmae=="" || t.username.match(/^\w+$/)==null|| t.username.length>16 ||t.username.length<8 )
-                {
-                    t.instance('usernameerr');
-                    return false;
-                    
-                } 
-                if(t.configpas!= t.password)
-                {
-                    t.instance('passnolike');
-                    return false;
-                }
-                if(t.phone.length!=10 && t.phone.length!=11)
-                {
-                    t.instance('phoneerr');
-                    return false;
-                }
-
-                $.post('./register',{id:this.id,username:this.username,phone:this.phone,password:this.password,code:this.code},function(result){
-                    console.log(result);
-                    if(result==1){
-                        t.instance('regsuccess');
-                        
-                    }
-                    else if(result==-1){
-                        t.instance('codeerr');
-                    }
-                    else if(result==0){
-                        t.instance('nameerr');
-                    }
-                });
-            },
-            instance (type) {
-                const title = '对话框的标题';
-                const content = '<p>一些对话框内容</p><p>一些对话框内容</p>';
-                switch (type) {
-                    
-                    case 'success':
-                        this.$Modal.success({
-                            title: "发送成功",
-                            content: "发送成功，60秒后可重新发送",
-                            okText: 'OK',
-                            cancelText: 'Cancel'
-                        });
-                        break;
-                    
-                    case 'error':
-                        this.$Modal.error({
-                            title: "发送失败",
-                            content: "请点击发送按钮重新发送",
-                            okText: 'OK',
-                    cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'usernameerr':
-                        this.$Modal.error({
-                            title: "注意",
-                            content: "用户名必须为8-16为数字加英文",
-                            okText: 'OK',
-                    cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'iderr':
-                        this.$Modal.error({
-                            title: "注意",
-                            content: "ID必须为8-16为数字加英文",
-                            okText: 'OK',
-                    cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'passerr':
-                        this.$Modal.error({
-                            title: "注意",
-                            content: "密码必须为8-16为数字加英文",
-                            okText: 'OK',
-                    cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'phoneerr':
-                        this.$Modal.error({
-                            title: "注意",
-                            content: "手机号码格式错误",
-                            okText: 'OK',
-                    cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'passnolike':
-                        this.$Modal.error({
-                            title: "注意",
-                            content: "两次输入的密码不一致",
-                            okText: 'OK',
-                    cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'admin':
-                        this.$Modal.error({
-                            title: "发送失败",
-                            content: "发送失败，请联系管理员",
-                            okText: 'OK',
-                    cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'used':
-                        this.$Modal.error({
-                            title: "发送失败",
-                            content: "手机号码或ID已被使用",
-                            okText: 'OK',
-                        cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'pf':
-                        this.$Modal.error({
-                            title: "发送失败",
-                            content: "发送太频繁，请稍后再试",
-                            okText: 'OK',
-                        cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'nameerr':
-                        this.$Modal.error({
-                            title: "注册失败",
-                            content: "注册失败，用户名或手机号码已经使用",
-                            okText: 'OK',
-                        cancelText: 'Cancel'
-                        });
-                        break;
-                        case 'codeerr':
-                        this.$Modal.error({
-                            title: "注册失败",
-                            content: "无效的验证码",
-                            okText: 'OK',
-                        cancelText: 'Cancel'
-                        });
-                        break;
-                        
-                        case 'regsuccess':
-                        this.$Modal.success({
-                            title: "注册成功",
-                            content: "注册成功，请登录帐号",
-                            okText: 'OK',
-                            onOk: () => {
-                                window.location.href="../";
-                            this.$Message.info('点击了确定');
+                        if (t.phone.length != 10 || t.phone.length != 11) {
+                            t.instance('phoneerr');
+                            return false;
+                        }
+                        t.loading = true;
+                        $.post('./send', {
+                            id: this.id,
+                            username: this.username,
+                            phone: this.phone
+                        }, function (result) {
+                            if (result == 1) {
+                                t.instance('success');
+                                t.loading = true;
+                                setTimeout(() => {
+                                    t.loading = false;
+                                }, 60000);
+                            } else if (result == 1) {
+                                t.instance('error');
+                                t.loading = false;
+                            } else if (result == 0) {
+                                t.instance('admin');
+                                t.loading = false;
+                            } else if (result == -2) {
+                                t.instance('used');
+                                t.loading = false;
+                            } else if (result == -3) {
+                                t.instance('pf');
+                                t.loading = false;
                             }
-                        });
-                        break;
+                        })
+                    }
+
+                },
+                register: function () {
+                    var t = this;
+                    //先做正则啊密码什么的验证
+
+                    if (t.id == "" || t.id.match(/^\w+$/) == null || t.id.length > 16 || t.id.length < 8) {
+                        t.instance('usernameerr');
+                        return false;
+                    }
+
+                    if (t.password == "" || t.password.match(/^\w+$/) == null || t.password.length > 16 ||
+                        t.password.length < 8) {
+                        t.instance('passerr');
+                        return false;
+                    }
+
+                    if (t.usernmae == "" || t.username.match(/^\w+$/) == null || t.username.length > 16 ||
+                        t.username.length < 8) {
+                        t.instance('usernameerr');
+                        return false;
+
+                    }
+                    if (t.configpas != t.password) {
+                        t.instance('passnolike');
+                        return false;
+                    }
+                    if (t.phone.length != 10 && t.phone.length != 11) {
+                        t.instance('phoneerr');
+                        return false;
+                    }
+
+                    $.post('./register', {
+                        id: this.id,
+                        username: this.username,
+                        phone: this.phone,
+                        password: this.password,
+                        code: this.code
+                    }, function (result) {
+                        console.log(result);
+                        if (result == 1) {
+                            t.instance('regsuccess');
+
+                        } else if (result == -1) {
+                            t.instance('codeerr');
+                        } else if (result == 0) {
+                            t.instance('nameerr');
+                        }
+                    });
+                },
+                instance(type) {
+                    const title = '对话框的标题';
+                    const content = '<p>一些对话框内容</p><p>一些对话框内容</p>';
+                    switch (type) {
+
+                        case 'success':
+                            this.$Modal.success({
+                                title: "发送成功",
+                                content: "发送成功，60秒后可重新发送",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+
+                        case 'error':
+                            this.$Modal.error({
+                                title: "发送失败",
+                                content: "请点击发送按钮重新发送",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'usernameerr':
+                            this.$Modal.error({
+                                title: "注意",
+                                content: "用户名必须为8-16为数字加英文",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'iderr':
+                            this.$Modal.error({
+                                title: "注意",
+                                content: "ID必须为8-16为数字加英文",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'passerr':
+                            this.$Modal.error({
+                                title: "注意",
+                                content: "密码必须为8-16为数字加英文",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'phoneerr':
+                            this.$Modal.error({
+                                title: "注意",
+                                content: "手机号码格式错误",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'passnolike':
+                            this.$Modal.error({
+                                title: "注意",
+                                content: "两次输入的密码不一致",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'admin':
+                            this.$Modal.error({
+                                title: "发送失败",
+                                content: "发送失败，请联系管理员",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'used':
+                            this.$Modal.error({
+                                title: "发送失败",
+                                content: "手机号码或ID已被使用",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'pf':
+                            this.$Modal.error({
+                                title: "发送失败",
+                                content: "发送太频繁，请稍后再试",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'nameerr':
+                            this.$Modal.error({
+                                title: "注册失败",
+                                content: "注册失败，用户名或手机号码已经使用",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+                        case 'codeerr':
+                            this.$Modal.error({
+                                title: "注册失败",
+                                content: "无效的验证码",
+                                okText: 'OK',
+                                cancelText: 'Cancel'
+                            });
+                            break;
+
+                        case 'regsuccess':
+                            this.$Modal.success({
+                                title: "注册成功",
+                                content: "注册成功，请登录帐号",
+                                okText: 'OK',
+                                onOk: () => {
+                                    window.location.href = "../";
+                                    
+                                }
+                            });
+                            break;
+                    }
                 }
             }
-        }
-    });
-</script>
-<script type="text/javascript">
-    
-    //         $(document).ready(function(){
-    // //            login("123","123");//測試用的，不用密碼登錄。以後要注釋
-    //             $(".login-txt-left").click(function () {
-    //                 $(".main-div").load("login.html");
-    //             })
-    //             $(".btn-login").click(function () {
-    //                 var id=$('[name=id]').val();
-    //                 var username=$('[name=username]').val();
-    //                 var password=$('[name=password]').val();
-    //                 var repassword=$('[name=repassword]').val();
-    //                 var msg="";
-    //                 if(id==""||username==""||password==""||repassword=="")
-    //                 {
-    //                     msg="Can not be empty";
-    //                 }
-    //                 if(password!=repassword)
-    //                 {
-    //                     msg="The password entered for the two time is inconsistent";
-    //                 }
-    //                 if(msg!="")
-    //                 {
-    //                     alert(msg);
-    //                 }
-    //                 else
-    //                 {
-    //                     register(id,password,username);
-    //                 }
-    //             })
-    //         });
-        </script>
-<!--<button onclick=" sendPrivateText();">Send</button>-->
+        });
+    </script>
+    <script type="text/javascript">
+        //         $(document).ready(function(){
+        // //            login("123","123");//測試用的，不用密碼登錄。以後要注釋
+        //             $(".login-txt-left").click(function () {
+        //                 $(".main-div").load("login.html");
+        //             })
+        //             $(".btn-login").click(function () {
+        //                 var id=$('[name=id]').val();
+        //                 var username=$('[name=username]').val();
+        //                 var password=$('[name=password]').val();
+        //                 var repassword=$('[name=repassword]').val();
+        //                 var msg="";
+        //                 if(id==""||username==""||password==""||repassword=="")
+        //                 {
+        //                     msg="Can not be empty";
+        //                 }
+        //                 if(password!=repassword)
+        //                 {
+        //                     msg="The password entered for the two time is inconsistent";
+        //                 }
+        //                 if(msg!="")
+        //                 {
+        //                     alert(msg);
+        //                 }
+        //                 else
+        //                 {
+        //                     register(id,password,username);
+        //                 }
+        //             })
+        //         });
+    </script>
+    <!--<button onclick=" sendPrivateText();">Send</button>-->
 </body>
+
 </html>
