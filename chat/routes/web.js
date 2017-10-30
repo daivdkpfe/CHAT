@@ -3,18 +3,36 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
+  var lang=lang_ch;
+  if(req.session.lang=="en"){
+    lang=lang_en;
+  }
+  
   res.render('web/index', {
-    title: 'PHCHAT'
+    title: 'PHCHAT',
+    lang:lang
   });
+  console.log(lang);
 });
 router.get('/register', function (req, res, next) {
+  var lang=lang_ch;
+  if(req.session.lang=="en"){
+    lang=lang_en;
+  }
+
   res.render('web/register', {
-    title: 'PHCHAT'
+    title: 'PHCHAT',
+    lang:lang
   });
 });
 router.get('/findpass', function (req, res, next) {
+  var lang=lang_ch;
+  if(req.session.lang=="en"){
+    lang=lang_en;
+  }
   res.render('web/findpass', {
-    title: 'PHCHAT'
+    title: 'PHCHAT',
+    lang:lang
   });
 });
 router.post('/findsend', function (req, res, next) {

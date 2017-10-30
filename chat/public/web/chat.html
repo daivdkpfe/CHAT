@@ -48,7 +48,7 @@
             <div class="setting-list-div">
                 <div class="setting-deleterFriend-div">
                     <img src="images/deleterFriend.png" alt="">
-                    <p>Remobe friend</p>
+                    <p>刪除好友</p>
                 </div>
             </div>
         </div>
@@ -645,8 +645,12 @@
 </script>
 
 <script>
+    
     var page = new Vue({
         el: '.main-div',
+        data:{
+            lang:lang
+        },
         methods: {
             instance(type) {
                 switch (type) {

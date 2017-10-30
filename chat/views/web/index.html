@@ -12,11 +12,11 @@
 <script type='text/javascript' src='webim.config.js'></script>
 <script type='text/javascript' src='strophe-1.2.8.min.js'></script>
 <script type='text/javascript' src='websdk-1.4.10.js'></script>
-<script src="//vuejs.org/js/vue.min.js"></script>
+<script src="../vue.min.js"></script>
 <!-- 引入样式 -->
-<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+<link rel="stylesheet" href="../iview.css">
 <!-- 引入组件库 -->
-<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+<script src="../iview.min.js"></script>
 
 
 
@@ -37,6 +37,10 @@
             $(".main-div").load("login.html");
         }
         })
+        var a='<%- JSON.stringify(lang) %>'
+        
+        var lang=eval('(' + a + ')');
+        
     </script>
 </div>
 <audio id="audio_play" src="" autoplay="autoplay" controls="controls" preload hidden></audio>

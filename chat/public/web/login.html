@@ -21,12 +21,12 @@
     <img class="logo" src="images/logo1.png" alt="">
     <div class="login">
         <div class="h20"></div>
-        <input type="text" class="web-input" placeholder="ID" name="username">
-        <input type="password" class="web-input" placeholder="Password" name="password">
-        <p class="login-txt-left"><a href="./register">Register</a></p>
-        <p class="login-txt-right"><a href="./findpass">Find password</a></p>
+        <input type="text" class="web-input" :placeholder="lang.id" name="username">
+        <input type="password" class="web-input" :placeholder="lang.password" name="password">
+        <p class="login-txt-left"><a href="./register">{{lang.register}}</a></p>
+        <p class="login-txt-right"><a href="./findpass">{{lang.findpass}}</a></p>
         <div class="btn-login-div">
-            <button class="btn-login" >Login</button>
+            <button class="btn-login" >{{lang.login}}</button>
         </div>
         <!--第三方登錄-->
         <div class="else-login">
@@ -38,3 +38,11 @@
     </div>
 
 </div>
+<script>
+    var page=new Vue({
+        el:'.main',
+        data:{
+            lang:lang
+        }
+    })
+</script>

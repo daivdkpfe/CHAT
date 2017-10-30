@@ -9,33 +9,14 @@
 
 <link rel="stylesheet" href="CSS/index.css">
 <script src="../jquery-3.2.1.js"></script>
-<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+<!-- <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script> -->
 <script src="jquery.cookie.js"></script>
 <script type='text/javascript' src='webim.config.js'></script>
 <script type='text/javascript' src='strophe-1.2.8.min.js'></script>
 <script type='text/javascript' src='websdk-1.4.10.js'></script>
 <script src="phchat.js"></script>
 
-<div class="main-div" id="main-div">
-    <div class="load"></div>
-    <script>
 
-    </script>
-    <script>
-        if($.cookie("username")!=null && $.cookie("username")!='null') {
 
-            tokenLogin();
-
-        }
-        else
-        {
-
-            $(".main-div").load("login.html");
-        }
-
-    </script>
-</div>
-<audio id="audio_play" src="" autoplay="autoplay" controls="controls" preload hidden></audio>
-<!--<button onclick=" sendPrivateText();">Send</button>-->
 </body>
 </html>

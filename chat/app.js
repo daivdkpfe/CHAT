@@ -4,7 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-require('./proxy');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+//require('./proxy');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -13,6 +16,14 @@ var wap = require('./routes/wap');
 var chat = require('./routes/chat');
 var register = require('./routes/register');
 var app = express();
+
+app.use(cookieParser());
+app.use(session({
+  resave: false, // don't save session if unmodified
+  saveUninitialized: true, // don't create session until something stored
+  secret: 'mvm_',
+  cookie:{maxAge: 3600*24*7*10}
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

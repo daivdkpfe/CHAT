@@ -46,3 +46,6 @@
 [2017-10-30 15:03:47.565] [INFO] log_file - select * from `member_table` where member_id=? and member_tel=?    gxc456,6309856456123
 [2017-10-30 15:03:47.574] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>? and type=2    6309856456123,471313,1509346728
 [2017-10-30 15:03:47.579] [INFO] log_file - update `member_table` set member_pass=?,base_pass=? where member_id=? and member_tel=?    76124b4c70ec40de05080c8675e0c620,Z3hjMTIzNDU2,gxc456,6309856456123
+[2017-10-30 15:53:08.857] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    admin,123123,1509349989,123,1,web
+[2017-10-30 15:53:09.657] [INFO] log_file - select * from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?) order by time desc limit 0,30    admin,123123,123123,admin
+[2017-10-30 15:53:09.673] [INFO] log_file - select count(*) from `chat_log` where (`from` =? and `to`=?) or (`from` =? and `to`=?)     admin,123123,123123,admin

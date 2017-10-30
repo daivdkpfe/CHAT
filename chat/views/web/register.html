@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
     <title>PHCHAT</title>
 </head>
 
@@ -43,20 +44,20 @@
 
 
 
-                <i-input v-model="id" placeholder="请输入ID" style="width: 300px" class="input_box"></i-input>
-                <i-input v-model="username" placeholder="请输入昵称" style="width: 300px" class="input_box"></i-input>
-                <i-input v-model="password" type="password" placeholder="请输入密碼" style="width: 300px" class="input_box"></i-input>
-                <i-input v-model="configpas" type="password" placeholder="请再次輸入密碼" style="width: 300px" class="input_box"></i-input>
-                <I-input v-model="phone" style="width:300px;margin:20px 0 0 50px;" placeholder="手机号码">
+                <i-input v-model="id" :placeholder="lang._001" style="width: 300px" class="input_box"></i-input>
+                <i-input v-model="username" :placeholder="lang._002" style="width: 300px" class="input_box"></i-input>
+                <i-input v-model="password" type="password" :placeholder="lang._003" style="width: 300px" class="input_box"></i-input>
+                <i-input v-model="configpas" type="password" :placeholder="lang._004" style="width: 300px" class="input_box"></i-input>
+                <I-input v-model="phone" style="width:300px;margin:20px 0 0 50px;" :placeholder="lang._005">
                     <span slot="prepend">+63</span>
                 </I-input>
 
 
                 <!-- <i-Button type="primary"  loading></i-Button> -->
-                <i-input v-model="code" placeholder="请輸入验证码" style="width: 229px;float:left;margin-right:0" class="input_box"></i-input>
+                <i-input v-model="code" :placeholder="lang._006" style="width: 229px;float:left;margin-right:0" class="input_box"></i-input>
                 <i-Button type="primary" :loading="loading" @click="toLoading()" style="float:left;margin-top:20px;margin-left:10px;width: 60px;
             text-align: center;" number='true'>
-                    <span v-if="!loading">Send</span>
+                    <span v-if="!loading">{{lang._007}}</span>
                     <span v-else></span>
                 </i-Button>
                 <!-- <input type="text" class="web-input" placeholder="ID" name="id">
@@ -64,10 +65,10 @@
             <input type="password" class="web-input" placeholder="Password" name="password">
             <input type="password" class="web-input" placeholder="Confirm password" name="repassword"> -->
                 <p class="login-txt-left">
-                    <a href="../">Login</a>
+                    <a href="../">{{lang.login}}</a>
                 </p>
                 <div class="btn-login-div">
-                    <button class="btn-login" @click="register()">Register</button>
+                    <button class="btn-login" @click="register()">{{lang.register}}</button>
                 </div>
                 <!--第三方登錄-->
             </div>
@@ -76,6 +77,9 @@
     </div>
     <script src="phchat.js"></script>
     <script>
+        var a='<%- JSON.stringify(lang) %>'
+        
+        var lang=eval('(' + a + ')');
         var page = new Vue({
             el: '#main-div',
             data: {
@@ -85,7 +89,8 @@
                 configpas: '',
                 phone: '',
                 code: '',
-                loading: false
+                loading: false,
+                lang:lang
             },
             methods: {
                 test: function () {
@@ -182,113 +187,112 @@
                     });
                 },
                 instance(type) {
-                    const title = '对话框的标题';
-                    const content = '<p>一些对话框内容</p><p>一些对话框内容</p>';
+                    var t=this;
                     switch (type) {
 
                         case 'success':
                             this.$Modal.success({
-                                title: "发送成功",
-                                content: "发送成功，60秒后可重新发送",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._008,
+                                content: t.lang._009,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
 
                         case 'error':
                             this.$Modal.error({
-                                title: "发送失败",
-                                content: "请点击发送按钮重新发送",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._016,
+                                content:t.lang_025,
+                                okText:t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'usernameerr':
                             this.$Modal.error({
-                                title: "注意",
-                                content: "用户名必须为8-16为数字加英文",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._010,
+                                content: t.lang._011,
+                                okText:t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'iderr':
                             this.$Modal.error({
-                                title: "注意",
-                                content: "ID必须为8-16为数字加英文",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._010,
+                                content: t.lang._012,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'passerr':
                             this.$Modal.error({
-                                title: "注意",
-                                content: "密码必须为8-16为数字加英文",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._010,
+                                content: t.lang._013,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'phoneerr':
                             this.$Modal.error({
-                                title: "注意",
-                                content: "手机号码格式错误",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._010,
+                                content: t.lang._014,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'passnolike':
                             this.$Modal.error({
-                                title: "注意",
-                                content: "两次输入的密码不一致",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._010,
+                                content: t.lang._015,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'admin':
                             this.$Modal.error({
-                                title: "发送失败",
-                                content: "发送失败，请联系管理员",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._016,
+                                content: t.lang._017,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'used':
                             this.$Modal.error({
-                                title: "发送失败",
-                                content: "手机号码或ID已被使用",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._016,
+                                content: t.lang._018,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'pf':
                             this.$Modal.error({
-                                title: "发送失败",
-                                content: "发送太频繁，请稍后再试",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title:t.lang._016,
+                                content: t.lang._019,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'nameerr':
                             this.$Modal.error({
-                                title: "注册失败",
-                                content: "注册失败，用户名或手机号码已经使用",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._020,
+                                content: t.lang._021,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
                         case 'codeerr':
                             this.$Modal.error({
-                                title: "注册失败",
-                                content: "无效的验证码",
-                                okText: 'OK',
-                                cancelText: 'Cancel'
+                                title: t.lang._020,
+                                content:t.lang._022,
+                                okText: t.lang.ok,
+                                cancelText: t.lang.cancel
                             });
                             break;
 
                         case 'regsuccess':
                             this.$Modal.success({
-                                title: "注册成功",
-                                content: "注册成功，请登录帐号",
-                                okText: 'OK',
+                                title: t.lang._023,
+                                content: t.lang._024,
+                                okText: t.lang.ok,
                                 onOk: () => {
                                     window.location.href = "../";
                                     
@@ -300,38 +304,7 @@
             }
         });
     </script>
-    <script type="text/javascript">
-        //         $(document).ready(function(){
-        // //            login("123","123");//測試用的，不用密碼登錄。以後要注釋
-        //             $(".login-txt-left").click(function () {
-        //                 $(".main-div").load("login.html");
-        //             })
-        //             $(".btn-login").click(function () {
-        //                 var id=$('[name=id]').val();
-        //                 var username=$('[name=username]').val();
-        //                 var password=$('[name=password]').val();
-        //                 var repassword=$('[name=repassword]').val();
-        //                 var msg="";
-        //                 if(id==""||username==""||password==""||repassword=="")
-        //                 {
-        //                     msg="Can not be empty";
-        //                 }
-        //                 if(password!=repassword)
-        //                 {
-        //                     msg="The password entered for the two time is inconsistent";
-        //                 }
-        //                 if(msg!="")
-        //                 {
-        //                     alert(msg);
-        //                 }
-        //                 else
-        //                 {
-        //                     register(id,password,username);
-        //                 }
-        //             })
-        //         });
-    </script>
-    <!--<button onclick=" sendPrivateText();">Send</button>-->
+
 </body>
 
 </html>
