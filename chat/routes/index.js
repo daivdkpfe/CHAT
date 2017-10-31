@@ -8,14 +8,14 @@ router.get('/', function(req, res, next) {
   if(typeof(req.query.to)!="undefined")
   {
     if(agentID){
-      res.redirect('./wab?to='+req.query.to);//重定向
+      res.redirect('./web?to='+req.query.to);//重定向//手機
     }else{
       res.redirect('./web?to='+req.query.to);//重定向
     }
   }
   else{
     if(agentID){
-      res.redirect('./wap');//重定向
+      res.redirect('./web');//重定向//手機
     }else{
       res.redirect('./web');//重定向
     }
