@@ -552,7 +552,9 @@
     //獲取get數據End
     //切換語言
     $("body").on("click",".language_div",function () {
-        $.cookie('language','ch',{path:'/'});
-        window.location.href="../index.html";
+       $.post('./lang',{},function(result){
+
+       })
+        window.location.reload();
     });
 </script>

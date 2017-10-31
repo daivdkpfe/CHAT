@@ -742,17 +742,17 @@ margin-left: 62.5px;
     outline: none;
     border:none;
     background: url("../images/picture.png");
-    width: 27px;
-    height:27px;
+    width: 25px;
+    height:25px;
     font-size: 0;
     padding: 0;
     float: left;
-    background-size: 27px 27px;
+    background-size: 25px 25px;
     margin:4.5px 5px;
 }
 .picture_button:hover{
     background: url("../images/picture-1.png");
-    background-size: 27px 27px;
+    background-size: 25px 25px;
 }
 .picture_input{
     display: none;
@@ -761,17 +761,17 @@ margin-left: 62.5px;
     outline: none;
     border:none;
     background: url("../images/file.png");
-    width: 21px;
-    height:21px;
+    width: 25px;
+    height:25px;
     font-size: 0;
     padding: 0;
     float: left;
-    background-size: 21px 21px;
-    margin:6.5px 5px 7.5px 13px;
+    background-size: 25px 25px;
+    margin:4.5px 5px;
 }
 .file_button:hover{
     background: url("../images/file-1.png");
-    background-size: 21px 21px;
+    background-size: 25px 25px;
 }
 .file_input{
     display: none;

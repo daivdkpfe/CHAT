@@ -16,7 +16,7 @@
     <script type='text/javascript' src='websdk-1.4.10.js'></script>
     <script src="../vue.min.js"></script>
     <!-- 引入样式 -->
-    <link rel="stylesheet" href="../iview.css">
+    <link rel="stylesheet" href="../styles/iview.css">
     <!-- 引入组件库 -->
     <script src="../iview.min.js"></script>
 
@@ -157,20 +157,20 @@
 
                     // if(t.password=="" || t.password.match(/^\w+$/)==null|| t.password.length>16 ||t.password.length<8 )
                     // {
-                    // t.instance('error','提示','密码必须为8-16为数字加英文','OK',"CANCEL");
+                    // t.instance('error',t.lang.notic,'密码必须为8-16为数字加英文',t.lang.ok,"CANCEL");
                     // return false;
                     // } 
 
                     if (t.phone.length != 10 && t.phone.length != 11) {
-                        t.instance('error', '提示', '請輸入正確的電話號碼', 'OK', 'CANCEL');
+                        t.instance('error', t.lang.notic, t.lang._014, t.lang.ok, t.lang.cancel);
                         return false;
                     }
                     if (t.id == "") {
-                        t.instance('error', '提示', '請輸入ID', 'OK', 'CANCEL');
+                        t.instance('error', t.lang.notic,t.lang._001, t.lang.ok, t.lang.cancel);
                         return false;
                     }
                     if (t.code == "") {
-                        t.instance('error', '提示', '請輸入驗證碼', 'OK', 'CANCEL');
+                        t.instance('error', t.lang.notic,t.lang._006, t.lang.ok, t.lang.cancel);
                         return false;
                     }
                     t.setp = 2;
@@ -181,12 +181,12 @@
                     t.loading = true;
 
                     if (t.phone.length != 10 && t.phone.length != 11) {
-                        t.instance('error', '提示', '請輸入正確的電話號碼', 'OK', 'CANCEL');
+                        t.instance('error', t.lang.notic, t.lang._014, t.lang.ok, t.lang.cancel);
                         return false;
                         t.loading=false;
                     }
                     if (t.id == "") {
-                        t.instance('error', '提示', '請輸入ID', 'OK', 'CANCEL');
+                        t.instance('error', t.lang.notic, t.lang._001, t.lang.ok, t.lang.cancel);
                         return false;
                         t.loading=false;
                     }
@@ -196,19 +196,19 @@
                     }, function (result) {
                         console.log(result);
                         if (result == -2) {
-                            t.instance('error', '提示', '找不到用户', 'OK', 'CANCEL');
+                            t.instance('error', t.lang.notic, t.lang._027, t.lang.ok, t.lang.cancel);
                             t.loading=false;
                         } else if (result == 1) {
-                            t.instance('success', '恭喜', '发送成功，请查看手机验证码', 'OK', 'CANCEL');
+                            t.instance('success', '恭喜', t.lang._009, t.lang.ok, t.lang.cancel);
                             t.loading = true;
                                 setTimeout(() => {
                                     t.loading = false;
                                 }, 60000);
                         } else if (result == -3) {
-                            t.instance('error', '提示', '发送过于频繁，请稍等', 'OK', 'CANCEL');
+                            t.instance('error', t.lang.notic,t.lang._019, t.lang.ok, t.lang.cancel);
                             t.loading=false;
                         } else {
-                            t.instance('error', '提示', '发送失败', 'OK', 'CANCEL');
+                            t.instance('error', t.lang.notic,t.lang._016, t.lang.ok, t.lang.cancel);
                             t.loading=false;
                         }
                     })
@@ -217,12 +217,12 @@
                 changepass() {
                     var t = this;
                     if (t.password != t.configpas) {
-                        t.instance('error', '提示', '兩次輸入的密碼不一致', 'OK', 'CANCEL');
+                        t.instance('error', t.lang.notic, t.lang._015, t.lang.ok, t.lang.cancel);
                         return false;
                     }
                     if (t.password == "" || t.password.match(/^\w+$/) == null || t.password.length > 16 || t.password
                         .length < 8) {
-                        t.instance('error', '提示', '密碼必須是長度8-16的數字和英文組合', 'OK', 'CANCEL');
+                        t.instance('error', t.lang.notic, t.lang._013, t.lang.ok, t.lang.cancel);
                         return false;
                     }
                     $.post('./change', {
@@ -233,19 +233,19 @@
                     }, function (result) {
                         console.log(result);
                         if(result==-3){
-                            t.instance('error', '提示', '找不到指定用戶', 'OK', 'CANCEL');
+                            t.instance('error', t.lang.notic, t.lang._027, t.lang.ok, t.lang.cancel);
                         }
                         if(result==-2){
-                            t.instance('error', '提示', '無效驗證碼', 'OK', 'CANCEL');
+                            t.instance('error', t.lang.notic, t.lang._022, t.lang.ok, t.lang.cancel);
                         }
                         if(result==1){
-                            t.instance('successchange', '恭喜', '修改成功', 'OK', 'CANCEL');
+                            t.instance('successchange', t.lang.gx, t.lang._028, t.lang.ok, t.lang.cancel);
                         }
                     })
                 }
 
             }
-
+            
         });
     </script>
 </body>

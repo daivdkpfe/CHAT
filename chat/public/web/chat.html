@@ -1,4 +1,5 @@
 <div class="chat-div">
+      
     <!--<div class="chat-div-top">-->
 
     <!--<div class="search-div"><input type="text" placeholder="Search"></div>-->
@@ -16,7 +17,7 @@
         <!--搜索div-->
         <div class="chat-search">
             <div class="search">
-                <input type="text" class="search-input" placeholder="搜索" onkeyup="ss()">
+                <input type="text" class="search-input" :placeholder="lang.search" onkeyup="ss()">
             </div>
         </div>
         <!--搜索div-->
@@ -48,14 +49,14 @@
             <div class="setting-list-div">
                 <div class="setting-deleterFriend-div">
                     <img src="images/deleterFriend.png" alt="">
-                    <p>刪除好友</p>
+                    <p>{{lang._029}}</p>
                 </div>
             </div>
         </div>
         <!--聊天中的用户的名字结束-->
         <div class="chat-list">
             <div class="chatting" style="background: url(images/logo.png)">
-                <div class="language_div">Change language</div>
+                <div class="language_div">{{lang.change_lang}}</div>
             </div>
 
         </div>
@@ -190,11 +191,11 @@
                     <!--截圖按鈕-->
                     <!--<div class="screenshot"></div>-->
                     <!--截圖按鈕ENd-->
-                    <a class="History-record">Historical record</a>
+                    <a class="History-record">{{lang._030}}</a>
                 </div>
                 <textarea class="messages-div"></textarea>
                 <div class="button-send">
-                    <button class="send-button">Send</button>
+                    <button class="send-button">{{lang._031}}</button>
                 </div>
             </div>
         </div>
@@ -221,28 +222,28 @@
 <!--添加好友-->
 <div class="mask">
     <div class="add-friend-div">
-        <p class="add-friend-title">Add friend</p>
+        <p class="add-friend-title">{{lang._032}}</p>
         <div class="add-friend-out">
             <img class="add-friend-img" src="images/page-out.png" alt="">
         </div>
         <div class="add-friend-bottom">
             <input type="text" class="web-input friend-name" placeholder="ID">
-            <button class="add-friend-button">Add friend</button>
+            <button class="add-friend-button">{{lang._032}}</button>
         </div>
     </div>
 </div>
 <!--添加好友結束-->
 <div class="mask-agreeAdd">
     <div class="add-friend-div">
-        <p class="add-friend-title"> Request to add you as a friend</p>
+        <p class="add-friend-title"> {{lang._033}}</p>
         <div class="add-friend-out">
             <img class="agree-friend-img" src="images/page-out.png" alt="">
         </div>
         <div class="add-friend-bottom">
             <p class="agree-friend-name"></p>
-            <p> Request to add you as a friend</p>
-            <button class="Agree-friend-button" id="agreeFriends">Agree</button>
-            <button class="Refuse-friend-button" id="rejectFriends">Refuse</button>
+            <p> {{lang._034}}</p>
+            <button class="Agree-friend-button" id="agreeFriends">{{lang._035}}</button>
+            <button class="Refuse-friend-button" id="rejectFriends">{{lang._036}}</button>
         </div>
     </div>
 </div>
@@ -637,10 +638,15 @@
     //獲取get數據End
     //切換語言
     $("body").on("click", ".language_div", function () {
-        $.cookie('language', 'ch', {
-            path: '/'
-        });
-        window.location.href = "../index.html";
+       $.post('./lang',{},function(result){
+           if(result==1)
+           {
+               window.location.reload();
+           }
+           else{
+               page.instance("changeerr")
+           }
+       })
     });
 </script>
 
@@ -650,34 +656,44 @@
         el: '.main-div',
         data:{
             lang:lang
+          
         },
         methods: {
             instance(type) {
+                var t=this;
                 switch (type) {
                     case 'error':
                         this.$Modal.error({
-                            title: '错误提示',
-                            content: '<p>发送错误</p>',
-                            okText: '确定',
-                            cancelText: '取消'
+                            title: t.lang.error,
+                            content: '<p>'+t.lang._037+'</p>',
+                            okText: t.lang.ok,
+                            cancelText: t.lang.cancel
                         });
                         break;
                     case 'uploaderr':
                     this.$Modal.error({
-                            title: '错误提示',
-                            content: '<p>不支持的上传格式</p>',
-                            okText: '确定',
-                            cancelText: '取消'
+                            title: t.lang.error,
+                            content: '<p>'+t.lang._038+'</p>',
+                            okText: t.lang.ok,
+                            cancelText: t.lang.cancel
                         });
                     break;
                     case 'queryerr':
                     this.$Modal.error({
-                            title: '错误提示',
-                            content: '<p>查詢失敗</p>',
-                            okText: '确定',
-                            cancelText: '取消'
+                            title: t.lang.error,
+                            content: '<p>'+t.lang._039+'</p>',
+                            okText: t.lang.ok,
+                            cancelText: t.lang.cancel
                         });
-                    
+                    break;
+                    case 'changeerr':
+                    this.$Modal.error({
+                            title: t.lang.error,
+                            content: '<p>'+t.lang._040+'</p>',
+                            okText: t.lang.ok,
+                            cancelText: t.lang.cancel
+                        });
+                    break;
                 }
             }
         }

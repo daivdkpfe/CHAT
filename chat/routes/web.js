@@ -205,5 +205,23 @@ router.post('/change',function(req,res,next){
 
   }
   run();
+});
+router.post('/lang',function(req,res,next){
+  
+  if(req.session.lang=="en")
+  {
+    req.session.lang="ch"
+    res.json(1);
+  }
+  else if(req.session.lang=="ch")
+  {
+    req.session.lang='en';
+    res.json(1);    
+  }
+  else{
+    req.session.lang='en';
+    res.json(1);
+  }
+  
 })
 module.exports = router;

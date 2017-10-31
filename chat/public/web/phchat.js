@@ -378,20 +378,21 @@ function register(user,pass,nick) {
 
 //    登錄開始
 function login(user,pass) {
+    page.spinShow=true;
     var options = {
         apiUrl: WebIM.config.apiURL,
         user: user,
         pwd: pass,
         appKey: WebIM.config.appkey,
         success: function (token) {
-            console.log(token);
+            
             $.cookie("username",user);
             $.cookie("webim_"+token.user.username,token.access_token);
-
-
             // alert($.cookie('webim_' + encryptUsername));
         },
         error: function(){
+            page.spinShow=false;
+            page.loginerr();
         }
     };
 
@@ -486,7 +487,7 @@ function friend() {
                         friendList= friendList +'<div class="chat-list-div  chat-'+roster[i]["name"]+'"><p class="unread"></p><img src="images/portrait.jpg" class="chat-portrait" alt=""><p class="chat-username">'+roster[i]["name"]+'</p><p class="recent-message"></p></div>';
                     }
                     if ( ros.subscription === 'none') {
-                        friendList= friendList +'<div class="chat-list-div  chat-'+roster[i]["name"]+'"><img src="images/portrait.jpg" class="chat-portrait" alt=""><p class="chat-username">'+roster[i]["name"]+'</p><p class="isNoFriend">（Stranger）</p><p class="recent-message"></p></div>';
+                        friendList= friendList +'<div class="chat-list-div  chat-'+roster[i]["name"]+'"><img src="images/portrait.jpg" class="chat-portrait" alt=""><p class="chat-username">'+roster[i]["name"]+'</p><p class="isNoFriend">（'+page.lang._041+'）</p><p class="recent-message"></p></div>';
                     }
                 }
 
@@ -587,7 +588,7 @@ function addReceiveMessage(message,from,time) {
     {
         if(!$(".chat-list-div").hasClass("chat-"+from))//好友列表有沒有這個人
         {
-            $(".chat-div-main-top").html($(".chat-div-main-top").html()+'<div class="chat-list-div  chat-'+from+'"><img src="images/portrait.jpg" class="chat-portrait" alt=""><p class="chat-username">'+from+'</p><p class="isNoFriend">（Stranger）</p><p class="recent-message"></p></div>');
+            $(".chat-div-main-top").html($(".chat-div-main-top").html()+'<div class="chat-list-div  chat-'+from+'"><img src="images/portrait.jpg" class="chat-portrait" alt=""><p class="chat-username">'+from+'</p><p class="isNoFriend">（'+page.lang._041+'）</p><p class="recent-message"></p></div>');
 
         }
         $("."+from).append('<div class="chat-receive-message"><div class="chat-receive-message-time left"><img src="images/portrait.jpg" class="chatting-portrait left" alt=""><p class="left receive-message-time">'+time+'</p><div class="receiveed-message left receiveed">'+message+'</div></div></div>');
@@ -629,7 +630,7 @@ function addReceiveMessage(message,from,time) {
         setTimeout(function(){
             if(!$(".chat-list-div").hasClass("chat-"+from))//好友列表有沒有這個人，用於離綫消息
             {
-                $(".chat-div-main-top").html($(".chat-div-main-top").html()+'<div class="chat-list-div  chat-'+from+'"><img src="images/portrait.jpg" class="chat-portrait" alt=""><p class="chat-username">'+from+'</p><p class="isNoFriend">（Stranger）</p><p class="recent-message"></p></div>');
+                $(".chat-div-main-top").html($(".chat-div-main-top").html()+'<div class="chat-list-div  chat-'+from+'"><img src="images/portrait.jpg" class="chat-portrait" alt=""><p class="chat-username">'+from+'</p><p class="isNoFriend">（'+page.lang._041+'）</p><p class="recent-message"></p></div>');
 
             }
             addReceiveMessage(message,from,time);

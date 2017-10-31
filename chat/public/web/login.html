@@ -1,4 +1,5 @@
 <div class="main">
+        <Spin size="large" fix v-if="spinShow"></Spin>
     <script type="text/javascript">
         $(document).ready(function(){
 //            login("123","123");//測試用的，不用密碼登錄。以後要注釋
@@ -42,7 +43,19 @@
     var page=new Vue({
         el:'.main',
         data:{
-            lang:lang
+            lang:lang,
+            spinShow:false
+        },
+        methods:{
+            loginerr(){
+                var t=this;
+                this.$Modal.error({
+                            title: t.lang.error,
+                            content: t.lang.loginerr,
+                            okText: t.lang.ok,
+                            cancelText: t.lang.cancel
+                        });
+            }
         }
     })
 </script>
