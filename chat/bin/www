@@ -16,6 +16,7 @@ var request = require('request');
 var zlib = require('zlib');
 global.lang_ch=require('../language/lang_ch');
 global.lang_en=require('../language/lang_en');
+var config=require('../include/config');
 
 
 
@@ -169,11 +170,11 @@ global.logger = log4js.getLogger('log_file');
 //數據庫
 global.pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'localhost',
-  user            : 'root',
-  password        : '',//database
-  database        : 'chat',
-  charset         :'utf8_general_ci'
+  host            : config.host,
+  user            : config.user,
+  password        : config.password,//database
+  database        : config.database,
+  charset         :config.charset
 });//全局方法，打开数据库连接池
 global.sqlQuery=function(sql,callback){
 

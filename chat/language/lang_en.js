@@ -64,7 +64,4 @@
     _039:'Query failure',
     _040:'Handover failure',
     _041:"Stranger"
-
-
-
 }
