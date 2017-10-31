@@ -5,6 +5,7 @@ proxy.on(function (err, req, res) {
     });
 });
 var server = require('http').createServer(function (req, res) {
+    console.log('listen');
     var host = req.headers.host;
     switch (host) {
         case 'chat.ganxiaochuan.top':
@@ -12,7 +13,7 @@ var server = require('http').createServer(function (req, res) {
                 target: 'http://localhost:3000'
             });
             break;
-             case 'chat.meishenmeyong.com':
+        case 'chat.meishenmeyong.com':
             proxy.web(req, res, {
                 target: 'http://localhost:3000'
             });
@@ -22,7 +23,7 @@ var server = require('http').createServer(function (req, res) {
                 target: 'http://localhost:3001'
             });
             break;
-            case 'chat.phchat.com.ph':
+        case 'chat.phchat.com.ph':
             proxy.web(req, res, {
                 target: 'http://localhost:3000'
             });
@@ -34,5 +35,5 @@ var server = require('http').createServer(function (req, res) {
             res.end('Welcome to my server!');
     }
 });
-console.log("listening on port 80") ;
+console.log("listening on port 80");
 server.listen(80);
