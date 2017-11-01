@@ -13,7 +13,6 @@ router.post('/',function(req,res,next){
         }
         else{
             var sql=[];
-            
             sql.push(post.from);
             sql.push(post.to);
             sql.push(get_now_time());
@@ -33,6 +32,13 @@ router.post("/query",function(req,res,next)
     var start=(req.body.page-1)*30;
     var end =(req.body.page)*30;
     var page=req.body.page;
+    if(page>0)
+    {
+
+    }
+    else{
+        page=1;
+    }
     var sql=[];
     sql.push(p1);
     sql.push(p2);

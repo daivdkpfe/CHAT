@@ -105,7 +105,7 @@
 
                     if (!t.loading) {
 
-                        if (t.phone.length != 10 || t.phone.length != 11) {
+                        if (t.phone.length != 10 && t.phone.length != 11) {
                             t.instance('phoneerr');
                             return false;
                         }

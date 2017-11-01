@@ -8,7 +8,17 @@ var server = require('http').createServer(function (req, res) {
     console.log('listen');
     var host = req.headers.host;
     switch (host) {
+        case 'gxc.ganxiaochuan.top':
+        proxy.web(req, res, {
+            target: 'http://localhost:3000'
+        });
+        break;
         case 'chat.ganxiaochuan.top':
+            proxy.web(req, res, {
+                target: 'http://localhost:3000'
+            });
+            break;
+            case 'gxc.ganxiaochuan.top':
             proxy.web(req, res, {
                 target: 'http://localhost:3000'
             });
