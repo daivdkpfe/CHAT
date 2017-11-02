@@ -51,7 +51,7 @@ router.post('/findsend', function (req, res, next) {
           res.json(-2); //找不到這個帳號
         } else {
 
-          var txt = 'Your verification code is:' + code + ',Please use it within 5 minutes【PHCHAT】';
+          var txt = 'Your verification code is:' + code + ',Please use it within 5 minutes[PHCHAT]';
           sms_send(phone, txt, function (result) {
             if (result == 1) {
 
