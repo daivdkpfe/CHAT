@@ -28,8 +28,7 @@ router.post('/',function(req,res,next){
         await sqlasnyc('insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?',sql);
         user.createUser(id, password);
         user.editNickname(id, username);
-        res.json(1);
-     
+        res.json(1);//註冊成功
     }
     else{
       res.json(0);//用户已存在

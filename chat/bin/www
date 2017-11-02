@@ -679,7 +679,6 @@ global.post=function (host,path,data,callback) {
     var postData=querystring.stringify(data);
     var options={
         hostname:host,
-        port:80,
         path:path,
         method:'POST',
         headers:{

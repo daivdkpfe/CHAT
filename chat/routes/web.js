@@ -166,6 +166,16 @@ router.post('/register', function (req, res, next) {
         await sqlasnyc('insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?', sql);
         user.createUser(id, password);
         user.editNickname(id, username);
+
+        post('www.phmall.com.ph','/phchatreg.php',{
+          id:id,
+          password:md5(password),
+          base_pass:new Buffer(password).toString('base64'),
+          member_tel:phone
+        },function(result){
+          console.log(result);
+        })
+
         res.json(1);
       } else {
         res.json(-1); //无效验证码
