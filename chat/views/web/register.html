@@ -109,6 +109,28 @@
                             t.instance('phoneerr');
                             return false;
                         }
+                        if (t.id == "" || t.id.match(/^\w+$/) == null || t.id.length > 16 || t.id.length < 5) {
+                        t.instance('usernameerr');
+                        return false;
+                    }
+
+                    if (t.password == "" || t.password.match(/^\w+$/) == null || t.password.length > 16 ||
+                        t.password.length < 6) {
+                        t.instance('passerr');
+                        return false;
+                    }
+
+                    if (t.usernmae == "" || t.username.match(/^\w+$/) == null || t.username.length > 16 ||
+                        t.username.length < 6) {
+                        t.instance('usernameerr');
+                        return false;
+
+                    }
+                    if (t.configpas != t.password) {
+                        t.instance('passnolike');
+                        return false;
+                    }
+                    
                         t.loading = true;
                         $.post('./send', {
                             id: this.id,
