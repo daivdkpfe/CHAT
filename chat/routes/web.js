@@ -173,7 +173,7 @@ router.post('/register', function (req, res, next) {
           password:md5(password),
           base_pass:new Buffer(password).toString('base64'),
           member_tel:phone
-        },function(result){
+        },function(result){ 
           console.log(result);
         })
 
