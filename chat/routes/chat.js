@@ -12,6 +12,10 @@ router.post('/',function(req,res,next){
             res.json(0);
         }
         else{
+            if(typeof(post.key)=='undefined')
+            {
+                post.key='IOS';
+            }
             var sql=[];
             sql.push(post.from);
             sql.push(post.to);

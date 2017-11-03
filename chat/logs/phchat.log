@@ -338,3 +338,25 @@
 [2017-11-02 14:06:57.329] [INFO] log_file - select * from `member_table` where member_id=? or member_tel=?    6309852111111,6309852111111,6309852111111
 [2017-11-02 14:06:57.352] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>? and type=1    6309852111111,563284,1509602517
 [2017-11-02 14:06:57.356] [INFO] log_file - insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?    6309852111111,6309852111111,c102f774d0b0c817348e1f5359bebd65,NjMwOTg1MjExMTExMQ==,6309852111111,1509602817
+[2017-11-02 17:10:19.244] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    admin,8001,1509613819,123123123,1,
+[2017-11-02 17:10:19.268] [INFO] log_file - Caught exception:Error: ER_BAD_NULL_ERROR: Column 'key' cannot be null
+[2017-11-02 17:12:52.474] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    admin,8001,1509613972,13123132123,1,
+[2017-11-02 17:12:52.503] [INFO] log_file - Caught exception:Error: ER_BAD_NULL_ERROR: Column 'key' cannot be null
+[2017-11-02 17:13:02.731] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    admin,8001,1509613983,41414,1,
+[2017-11-02 17:13:02.751] [INFO] log_file - Caught exception:Error: ER_BAD_NULL_ERROR: Column 'key' cannot be null
+[2017-11-02 17:14:33.316] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    admin,8001,1509614073,34234,1,IOS
+[2017-11-02 17:14:46.583] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    admin,8001,1509614087,9090-90-90-,1,IOS
+[2017-11-02 17:27:54.712] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509614875,3333,1,IOS
+[2017-11-02 17:31:38.473] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615098,34234,1,IOS
+[2017-11-02 17:31:47.297] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615107,545465,1,IOS
+[2017-11-02 17:34:22.776] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615263,234234,1,IOS
+[2017-11-02 17:34:40.922] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615281,123123123,1,IOS
+[2017-11-02 17:35:28.203] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615328,12312312,1,IOS
+[2017-11-02 17:38:54.130] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615534,12312312,1,IOS
+[2017-11-02 17:41:21.567] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615682,34535,1,IOS
+[2017-11-02 17:41:26.812] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615687,435345345,1,IOS
+[2017-11-02 17:41:33.870] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615694,😆😆😆😆😆,1,IOS
+[2017-11-02 17:41:45.424] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    8001,admin,1509615705,😱😱😱😱,1,IOS
+[2017-11-03 14:09:25.321] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    Admin,8001,1509689365,东邪,1,IOS
+[2017-11-03 14:09:55.472] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    Admin,8001,1509689395,https://a1.easemob.com/1129170426178834/phchat/chatfiles/981abc70-c05d-11e7-b420-e39603cf7570,2,IOS
+[2017-11-03 14:10:14.423] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    Admin,8001,1509689414,https://a1.easemob.com/1129170426178834/phchat/chatfiles/a7ed5590-c05d-11e7-b135-e57f106eaf79,4,IOS
