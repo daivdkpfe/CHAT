@@ -68,11 +68,11 @@ conn.listen({
         $(".main-div").load("login.html");
         $.cookie('page', null);
         $.cookie('to', null);
-        $.cookie('username', null);
+      /*    $.cookie('username', null); */
         return false;
     },         //连接关闭回调
     onTextMessage: function ( message ) {
-        console.log(message);
+        
         if(message.type=="chat")
         {
             if($(".chatting").hasClass(message['from']))
@@ -385,7 +385,8 @@ function login(user,pass) {
         pwd: pass,
         appKey: WebIM.config.appkey,
         success: function (token) {
-            
+           
+
             $.cookie("username",user);
             $.cookie("webim_"+token.user.username,token.access_token);
             // alert($.cookie('webim_' + encryptUsername));
@@ -411,7 +412,7 @@ function tokenLogin(){
             accessToken: token,
             appKey: WebIM.config.appkey,
             success: function (token) {
-                // alert($.cookie('webim_' + encryptUsername));
+                
             },
             error: function(){
                 $(".main-div").load("login.html");
