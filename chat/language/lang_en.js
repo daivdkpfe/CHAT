@@ -11,7 +11,7 @@
     submit:"Submit",
     gx:"Congratulations",
     search:'Search',
-    change_lang:'Change Language',
+    change_lang:'切換語言',
     error:"Error",
     loginerr:"Logon failure",
     //Register

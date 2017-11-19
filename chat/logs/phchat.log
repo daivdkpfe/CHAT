@@ -384,3 +384,7 @@
 [2017-11-03 16:50:31.745] [INFO] log_file - select * from `member_table` where member_id=? or member_tel=?    gxc999,gxc999,6309054471600
 [2017-11-03 16:50:31.767] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>? and type=1    6309054471600,862647,1509698732
 [2017-11-03 16:50:31.773] [INFO] log_file - insert into `member_table` set member_id=?,username=?,member_pass=?,base_pass=?,member_tel=?,register_date=?    gxc999,gxc999,fbcec717e3877499ab26dc37608eb9ec,Z3hjOTk5,6309054471600,1509699032
+[2017-11-19 08:36:49.948] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    123456,123456,6309123456789
+[2017-11-19 08:36:50.093] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309123456789
+[2017-11-19 08:40:20.691] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    123456,123456,6309123456789
+[2017-11-19 08:40:20.697] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309123456789
