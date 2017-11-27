@@ -1,4 +1,16 @@
-[2017-11-19 08:36:49.948] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    123456,123456,6309123456789
-[2017-11-19 08:36:50.093] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309123456789
-[2017-11-19 08:40:20.691] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    123456,123456,6309123456789
-[2017-11-19 08:40:20.697] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309123456789
+[2017-11-27 14:07:58.704] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,是,1511762879,速度,1,web
+[2017-11-27 14:40:55.977] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511764856,HI,1,web
+[2017-11-27 14:41:27.154] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511764887,速度,1,web
+[2017-11-27 14:41:38.438] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511764898,HI
+,1,web
+[2017-11-27 14:41:55.741] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1511764916,你回家啊
+,1,web
+[2017-11-27 14:42:09.131] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511764929,HI
+,1,web
+[2017-11-27 14:42:22.619] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511764943,牛號
+,1,web
+[2017-11-27 14:44:30.777] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511765071,速度,1,web
+[2017-11-27 14:45:52.776] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511765153,速度,1,web
+[2017-11-27 14:47:28.354] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511765248,速度,1,web
+[2017-11-27 14:47:56.888] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511765277,速度,1,web
+[2017-11-27 14:48:44.018] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511765324,速度速度,1,web

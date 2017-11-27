@@ -31,6 +31,7 @@
     "session": "^0.1.0",
     "socket.io": "^2.0.3",
     "style-loader": "^0.19.0",
+    "title-notify": "^1.0.13",
     "vue": "^2.5.2"
   },
   "devDependencies": {

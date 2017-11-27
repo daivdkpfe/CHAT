@@ -1,5 +1,43 @@
 <div class="chat-div">
-      
+    <script type="text/javascript" src="../iNotify.js"></script>
+    <script>
+        var iNotify = new iNotify({
+            message: '有消息了。', //标题
+            effect: 'flash', // flash | scroll 闪烁还是滚动
+            //可选播放声音
+            audio: {
+                //可以使用数组传多种格式的声音文件
+                file: ['msg.mp4', 'msg.mp3', 'msg.wav']
+                    //下面也是可以的哦
+                    //file: 'msg.mp4'
+            },
+            //标题闪烁，或者滚动速度
+            interval: 1000,
+            //可选，默认绿底白字的  Favicon
+            updateFavicon: {
+                // favicon 字体颜色
+                textColor: "#fff",
+                //背景颜色，设置背景颜色透明，将值设置为“transparent”
+                backgroundColor: "#FE9b0c"
+            },
+            //可选chrome浏览器通知，默认不填写就是下面的内容
+            notification: {
+                title: "通知！", //设置标题
+                icon: "", //设置图标 icon 默认为 Favicon
+                body: '您来了一条新消息' //设置消息内容
+            }
+        })
+
+
+
+
+
+        document.onclick = function() {
+            iNotify.clearTimer();
+            iNotify.setTitle() //清除闪烁 显示原来的标题
+        };
+    </script>
+
     <!--<div class="chat-div-top">-->
 
     <!--<div class="search-div"><input type="text" placeholder="Search"></div>-->
@@ -254,9 +292,9 @@
     </div>
 </div>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function() {
         //点击enter 进行发送消息
-        $(".messages-div").bind("keyup", function () {
+        $(".messages-div").bind("keyup", function() {
             if (event.keyCode == 13) {
                 $(".send-button").trigger("click");
             }
@@ -279,21 +317,21 @@
         //        如果有指定的对话人则填出对应的对话框
 
         //截屏显示遮罩
-        $(".screenshot-div").find("a").click(function () {
+        $(".screenshot-div").find("a").click(function() {
             return false;
         });
-        $(".screenshot-div").find("img").click(function () {
+        $(".screenshot-div").find("img").click(function() {
             return false;
         });
 
-        $(".screenshot-div").click(function () {
+        $(".screenshot-div").click(function() {
             $(".mask-screenshot").toggle();
         });
 
-        $(".screenshot").click(function () {
+        $(".screenshot").click(function() {
             //試試截屏
             html2canvas(document.getElementById("main-div"), {
-                onrendered: function (canvas) {
+                onrendered: function(canvas) {
                     console.log(canvas.toDataURL());
                     //                    <a  href='"+canvas.toDataURL()+"' download='screenshot.jpg'>Downland</a>
                     //                    下載地址
@@ -307,7 +345,7 @@
             //試試截屏
         });
 
-        $("body").on('click', '.chat-list-div', function () {
+        $("body").on('click', '.chat-list-div', function() {
             removeSelectId();
             $(this).addClass("select-id");
             $(this).find(".unread").hide();
@@ -319,7 +357,7 @@
         });
 
         //        点击音频消息进行播放，再点击一次暂停
-        $("body").on('click', '.audio_play', function () {
+        $("body").on('click', '.audio_play', function() {
             if ($("#audio_play").attr("src") != "") {
                 $("#audio_play").attr("src", "");
                 $(this).find(".msg-audio-img").attr("src", "images/audio.png");
@@ -329,24 +367,24 @@
 
             }
         });
-        $("#audio_play").bind('ended', function () {
+        $("#audio_play").bind('ended', function() {
             $(".msg-audio-img").attr("src", "images/audio.png");
         });
         //        点击音频消息进行播放，再点击一次暂停 End
 
 
         //        打字時背景變白
-        $(".messages-div").focus(function () {
+        $(".messages-div").focus(function() {
             $(".send-message").css("background", "white");
         });
-        $(".messages-div").blur(function () {
-            $(".send-message").css("background", "none");
-        })
-        //        打字時背景變白結束
+        $(".messages-div").blur(function() {
+                $(".send-message").css("background", "none");
+            })
+            //        打字時背景變白結束
 
 
         //        發送文本
-        $(".send-button").click(function () {
+        $(".send-button").click(function() {
             var message = $(".messages-div").val();
             if (message == "") {
                 return false;
@@ -362,7 +400,7 @@
         //        發送文本結束
 
         //        打开聊天记录
-        $(".History-record").click(function () {
+        $(".History-record").click(function() {
             if ($(".history-record-div").is(":hidden")) {
 
                 $(".chat-div").css("width", "1088px");
@@ -393,7 +431,7 @@
 
 
         //            点击表情按钮打开表情面板
-        $(".expression-button").click(function () {
+        $(".expression-button").click(function() {
 
             $(".emoji-div").toggle();
         });
@@ -401,27 +439,27 @@
         //            点击表情按钮打开表情面板结束
 
         //        点击表情添加到输入框
-        $(".emoji-li").click(function () {
+        $(".emoji-li").click(function() {
 
             $(".messages-div").val($(".messages-div").val() + $(this).attr("txt"));
         });
         //        点击表情添加到输入框结束
 
         //        刷新聊天記錄，返回第一頁
-        $(".Refresh").click(function () {
+        $(".Refresh").click(function() {
             var to = $(".select-id").find(".chat-username").html();
             gethistory($.cookie("username"), to, 1);
             $.cookie("to", to);
             $.cookie("page", 1);
         });
-        $(".start-page").click(function () {
+        $(".start-page").click(function() {
             var to = $(".select-id").find(".chat-username").html();
             gethistory($.cookie("username"), to, 1);
             $.cookie("page", 1);
         });
         //        刷新聊天記錄結束
         //        上一頁聊天记录
-        $(".up-page").click(function () {
+        $(".up-page").click(function() {
             if ($.cookie("page") == 1) {
                 return false;
             } else {
@@ -432,7 +470,7 @@
         //        上一页聊天记录结束
 
         //        下一頁聊天記錄
-        $(".down-page").click(function () {
+        $(".down-page").click(function() {
             if ($.cookie("page") == $.cookie("countpage")) {
                 return false;
             } else {
@@ -444,7 +482,7 @@
         //        下一頁聊天記錄結束
 
         //        最後一頁聊天記錄
-        $(".end-page").click(function () {
+        $(".end-page").click(function() {
             var to = $(".select-id").find(".chat-username").html();
             gethistory($.cookie("username"), to, $.cookie("countpage"));
             $.cookie("page", $.cookie("countpage"));
@@ -452,7 +490,7 @@
         //        最後一頁聊天記錄結束
 
         //        退出登錄
-        $(".login-out").click(function () {
+        $(".login-out").click(function() {
             conn.close();
             //            $.cookie("username","");
         });
@@ -460,22 +498,22 @@
 
 
         //        添加好友打開介面
-        $(".addFriend").click(function () {
+        $(".addFriend").click(function() {
             $(".mask").toggle();
         });
         //        添加好友打開介面結束
 
         //        點擊打叉關閉添加好友介面
-        $(".add-friend-img").click(function () {
+        $(".add-friend-img").click(function() {
             $(".mask").toggle();
         });
-        $(".agree-friend-img").click(function () {
+        $(".agree-friend-img").click(function() {
             $(".mask-agreeAdd").toggle();
         });
         //        點擊打叉關閉好友介面結束
 
         //        點擊按鈕添加好友
-        $(".add-friend-button").click(function () {
+        $(".add-friend-button").click(function() {
             if ($(".friend-name").val() == "") {
                 return false;
             } else {
@@ -488,7 +526,7 @@
         //        點擊按鈕添加好友結束
 
         //        點擊按鈕刪除好友
-        $(".setting-deleterFriend-div").click(function () {
+        $(".setting-deleterFriend-div").click(function() {
             var to = $(".select-id").find(".chat-username").html();
             removeFriends(to);
             $(".chat-" + to).remove();
@@ -502,14 +540,14 @@
         //        點擊按鈕刪除好友結束
 
         //        點擊出現設置面板
-        $(".setting-div").click(function () {
+        $(".setting-div").click(function() {
             $(".setting-list-div").toggle();
         });
         //        點擊出現設置面板結束
 
 
         //        同意添加好友
-        $(".Agree-friend-button").click(function () {
+        $(".Agree-friend-button").click(function() {
             var name = $(".agree-friend-name").html();
             agreeAddFriend(name);
             $(".mask-agreeAdd").toggle();
@@ -518,7 +556,7 @@
 
         //        拒绝添加对方为好友
 
-        $(".Refuse-friend-button").click(function () {
+        $(".Refuse-friend-button").click(function() {
             var name = $(".agree-friend-name").html();
             refuseAddFriend(name);
             $(".mask-agreeAdd").toggle();
@@ -530,7 +568,7 @@
 
 
         // 单聊贴图发送（放到消息模块里）
-        document.addEventListener('paste', function (e) {
+        document.addEventListener('paste', function(e) {
             if (e.clipboardData && e.clipboardData.types) {
                 if (e.clipboardData.items.length > 0) {
                     if (/^image\/\w+$/.test(e.clipboardData.items[0].type)) {
@@ -549,14 +587,14 @@
                             to: to, // 接收消息对象
                             roomType: false,
                             chatType: 'singleChat',
-                            onFileUploadError: function (error) {
+                            onFileUploadError: function(error) {
                                 console.log('Error');
                             },
-                            onFileUploadComplete: function (data) {
+                            onFileUploadComplete: function(data) {
                                 imgUrl = msg.body.body.url;
                                 //                                        data.entities["0"].uuid
                             },
-                            success: function (id) {
+                            success: function(id) {
                                 $.ajax({
                                     url: "../chat",
                                     type: 'post',
@@ -567,12 +605,12 @@
                                         "type": 2,
                                         "key": 'web'
                                     },
-                                    success: function (req) {
+                                    success: function(req) {
                                         var img = "<img class='send-img' src='" +
                                             imgUrl + "'>";
                                         addSendMessage(img, 2);
                                     },
-                                    error: function () {
+                                    error: function() {
                                         alert("Send failed");
                                     }
                                 });
@@ -589,7 +627,7 @@
 
         //        點擊圖片觸發file_input
 
-        $(".picture_button").click(function () {
+        $(".picture_button").click(function() {
             $(".picture_input").trigger("click");
         });
 
@@ -598,7 +636,7 @@
 
         //        点击文件触发file_input
 
-        $(".file_button").click(function () {
+        $(".file_button").click(function() {
             $(".file_input").trigger("click");
         });
 
@@ -637,63 +675,60 @@
     }
     //獲取get數據End
     //切換語言
-    $("body").on("click", ".language_div", function () {
-       $.post('./lang',{},function(result){
-           if(result==1)
-           {
-               window.location.reload();
-           }
-           else{
-               page.instance("changeerr")
-           }
-       })
+    $("body").on("click", ".language_div", function() {
+        $.post('./lang', {}, function(result) {
+            if (result == 1) {
+                window.location.reload();
+            } else {
+                page.instance("changeerr")
+            }
+        })
     });
 </script>
 
 <script>
-    
     var page = new Vue({
         el: '.main-div',
-        data:{
-            lang:lang
-          
+        data: {
+            lang: lang
+
         },
         methods: {
             instance(type) {
-                var t=this;
+                var t = this;
                 switch (type) {
                     case 'error':
                         this.$Modal.error({
                             title: t.lang.error,
-                            content: '<p>'+t.lang._037+'</p>',
+                            content: '<p>' + t.lang._037 + '</p>',
                             okText: t.lang.ok,
                             cancelText: t.lang.cancel
                         });
                         break;
                     case 'uploaderr':
-                    this.$Modal.error({
+                        this.$Modal.error({
                             title: t.lang.error,
-                            content: '<p>'+t.lang._038+'</p>',
+                            content: '<p>' + t.lang._038 + '</p>',
                             okText: t.lang.ok,
                             cancelText: t.lang.cancel
                         });
-                    break;
+                        break;
                     case 'queryerr':
-                    this.$Modal.error({
+                        this.$Modal.error({
                             title: t.lang.error,
-                            content: '<p>'+t.lang._039+'</p>',
+                            content: '<p>' + t.lang._039 + '</p>',
                             okText: t.lang.ok,
                             cancelText: t.lang.cancel
                         });
-                    break;
+                        break;
                     case 'changeerr':
-                    this.$Modal.error({
+                        this.$Modal.error({
                             title: t.lang.error,
-                            content: '<p>'+t.lang._040+'</p>',
+                            content: '<p>' + t.lang._040 + '</p>',
                             okText: t.lang.ok,
                             cancelText: t.lang.cancel
                         });
-                    break;
+                        break;
                 }
             }
         }
