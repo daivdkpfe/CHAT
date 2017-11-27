@@ -105,7 +105,7 @@
 
                     if (!t.loading) {
                         if (t.id == "" || t.id.match(/^\w+$/) == null || t.id.length > 16 || t.id.length < 5) {
-                            console.login(t.id);
+
                             t.instance('iderr');
                             return false;
                         }
