@@ -14,3 +14,16 @@
 [2017-11-27 14:47:28.354] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511765248,速度,1,web
 [2017-11-27 14:47:56.888] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511765277,速度,1,web
 [2017-11-27 14:48:44.018] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511765324,速度速度,1,web
+[2017-11-27 15:08:18.616] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511766499,速度速度,1,web
+[2017-11-27 15:10:25.101] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511766625,速度,1,web
+[2017-11-27 15:56:23.687] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511769384,速度,1,web
+[2017-11-27 15:56:40.197] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123456,123,1511769400,速度,1,web
+[2017-11-27 16:05:47.408] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1511769947,123,1,web
+[2017-11-27 16:06:39.535] [INFO] log_file - INSERT INTO  `chat`.`chat_log` (`id`,`from` ,`to` , `time` , `message` ,`type` , `key`) VALUES (NULL ,?,?,?,?,?,?)    123,123456,1511770000,是,1,web
+[2017-11-27 16:14:17.516] [INFO] log_file - select * from `member_table` where member_id=? or member_tel=?    123123ekinaa,123123ekinaa,6309123456789
+[2017-11-27 16:14:17.527] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>? and type=1    6309123456789,,1511770158
+[2017-11-27 16:14:21.330] [INFO] log_file - select * from `member_table` where member_id=? and username=? and member_tel=?    123123ekinaa,123123ekinaa,6309123456789
+[2017-11-27 16:14:21.335] [INFO] log_file - select * from `send_code` where phone_num=? and type=1    6309123456789
+[2017-11-27 16:14:24.398] [INFO] log_file - update `send_code` set phone_num=?,send_time=?,type=?,code=? where uid=?    6309123456789,1511770464,1,885381,1
+[2017-11-27 16:14:35.600] [INFO] log_file - select * from `member_table` where member_id=? or member_tel=?    123123ekinaa,123456,6309123456789
+[2017-11-27 16:14:35.603] [INFO] log_file - select * from `send_code` where phone_num=? and code=? and send_time>? and type=1    6309123456789,,1511770176
